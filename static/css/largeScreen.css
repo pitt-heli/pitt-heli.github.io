@@ -34,3 +34,44 @@ nav {
 #tan-box {
     background-color: tan
 }
+
+.headshots {
+    height: 411px;
+    width: 411px;
+    border-radius: 50%;
+}
+
+.headshots-tan {
+    background-color: tan;
+    height: 411px;
+    width: 411px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        width: 250px;
+        height: 250px;
+
+    }
+}
+.headshots-purple {
+    background-color: purple;
+    height: 411px;
+    width: 411px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        width: 250px;
+        height: 250px;
+
+    }
+}
+
+.alumni-headshots {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
