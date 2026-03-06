@@ -22,7 +22,7 @@ nav {
                 color: black;
                 font-size: 30px;
             }
-            
+
             a.active {
                 color: black;
                 text-decoration: underline;
@@ -32,23 +32,10 @@ nav {
     }
 }
 
-#green-box {
-    background-color: green;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-}
+
 
 #tan-box {
     background-color: tan
-}
-
-.white-heli-logo {
-    width: 150px;
-    height: 150px;
 }
 
 .heli-logo {
@@ -57,7 +44,7 @@ nav {
 }
 
 #people-title {
-    color: #63058C; 
+    color: #63058C;
 }
 
 .people-headings {
@@ -78,12 +65,14 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+
     img {
         width: 250px;
         height: 250px;
 
     }
 }
+
 .headshots-purple {
     background-color: purple;
     height: 411px;
@@ -92,6 +81,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+
     img {
         width: 250px;
         height: 250px;
@@ -106,6 +96,82 @@ nav {
 }
 
 .footer {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
+    font-size: 24px;
+}
+
+#homepage-box {
+    position: relative;
+    display: inline-block;
+    padding: 30px 0px 0px 300px;
+}
+
+#green-box {
+    position: absolute;
+    bottom: -90px;
+    right: -90px;
+    width: 160px;
+    height: 160px;
+    background-color: #2e7d5e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.white-heli-logo {
+    width: 97px;
+    height: 97px;
+}
+
+#hompage-box-textbox {
+    display: flex;
+    justify-content: center;  
+    align-items: center;  
+    font-family: inherit;
+    width: 1300px;
+    padding: 30px;
+    height: 500px;
+    border: 1.5px solid black;
+    border-radius: 4px;
+    background: #fff;
+    font-size: 28px;
+    line-height: 1.6;
+    box-sizing: border-box;
+    pointer-events: none;
+    cursor: default;
+    outline: none;
+}
+
+
+#purple-heli-homepage {
+    display: inline-block;
+    height: 106px;
+    width: 118px;
+}
+
+#yellow-heli-homepage{
+    display: inline-block;
+    height: 150px;
+    width: 159px;
+}
+
+#green-star-homepage {
+    display: block;
+}
+
+#home-title {
+    color: #04915F;
+    font-weight: normal;
+}
+
+#home-title .bold {
+    font-weight: bold;
+}
+
+#home-title .italic {
+    font-style: italic;
 }
