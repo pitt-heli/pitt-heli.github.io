@@ -1,3 +1,5 @@
+/* ======================================= GLOBAL STYLING ======================================= */
+
 body {
     font-family: 'DM Sans', sans-serif;
 }
@@ -32,67 +34,6 @@ nav {
     }
 }
 
-#tan-box {
-    background-color: tan
-}
-
-.heli-logo {
-    height: 75px;
-    width: 75px;
-}
-
-#people-title {
-    color: #63058C;
-}
-
-.people-headings {
-    color: #04915F;
-}
-
-.headshots {
-    height: 411px;
-    width: 411px;
-    border-radius: 50%;
-}
-
-.headshots-tan {
-    background-color: tan;
-    height: 411px;
-    width: 411px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    img {
-        width: 250px;
-        height: 250px;
-
-    }
-}
-
-.headshots-purple {
-    background-color: purple;
-    height: 411px;
-    width: 411px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    img {
-        width: 250px;
-        height: 250px;
-
-    }
-}
-
-.alumni-headshots {
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-}
-
 .footer {
     display: flex;
     flex-direction: column;
@@ -104,6 +45,17 @@ nav {
         width: 106px;
         height: 118px;
     }
+}
+
+/* ====================================== HOMEPAGE STYLING ====================================== */
+
+#tan-box {
+    background-color: tan
+}
+
+.heli-logo {
+    height: 75px;
+    width: 75px;
 }
 
 #homepage-main {
@@ -193,3 +145,113 @@ nav {
 #home-title .italic {
     font-style: italic;
 }
+
+/* ====================================== PEOPLE STYLING ====================================== */
+
+#raquel-section {
+    display: flex;
+}
+
+#people-title {
+    color: #63058C;
+}
+
+.people-headings {
+    color: #04915F;
+    padding-bottom: 30px;
+}
+
+/* .headshots {
+    height: 411px;
+    width: 411px;
+    border-radius: 50%;
+} */
+
+.headshots-tan {
+    background-color: tan;
+    height: 411px;
+    width: 411px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+.headshots-purple {
+    background-color: purple;
+    height: 411px;
+    width: 411px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 250px;
+        height: 250px;
+
+    }
+}
+
+.alumni-student {
+    display: inline-block;
+}
+
+.alumni-headshots {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+
+.student {
+    width: 20%;
+    margin: 0px 50px 50px 0px;
+    text-align: center;
+    display: inline-block;
+}
+
+/* Wrapper injected by JS around the img */
+.headshot-wrap {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    flex-shrink: 0;
+}
+
+.headshots {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+/* SVG arc overlay */
+.headshot-wrap svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    pointer-events: none;
+}
+
+/* Hide the original h3 */
+h3.person-name {
+    display: none;
+}
+
+/* ====================================== CLASSES STYLING (Zhuoyan)====================================== */
+
+/* ====================================== PROJECTS STYLING (Zhuoyan) ====================================== */
+
+/* ====================================== PROSPECTS STYLING (Mitchell) ====================================== */
+
+/* ====================================== PUBLICATIONS STYLING (Mitchell) ====================================== */
