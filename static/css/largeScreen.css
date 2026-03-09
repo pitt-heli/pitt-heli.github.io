@@ -32,8 +32,6 @@ nav {
     }
 }
 
-
-
 #tan-box {
     background-color: tan
 }
@@ -100,13 +98,31 @@ nav {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    font-size: 24px;
+    font-size: 12px;
+
+    img {
+        width: 106px;
+        height: 118px;
+    }
+}
+
+#homepage-main {
+    display: inline-block;
+}
+
+#homepage-leftOfBox {
+    /* padding-left: 10%; */
+    display: inline-block;
 }
 
 #homepage-box {
     position: relative;
     display: inline-block;
-    padding: 30px 0px 0px 300px;
+    /* padding: 30px 0px 0px 300px; */
+}
+
+#homepage-rightOfBox {
+    display: inline-block;
 }
 
 #green-box {
@@ -129,8 +145,8 @@ nav {
 
 #hompage-box-textbox {
     display: flex;
-    justify-content: center;  
-    align-items: center;  
+    justify-content: center;
+    align-items: center;
     font-family: inherit;
     width: 1300px;
     padding: 30px;
@@ -146,14 +162,13 @@ nav {
     outline: none;
 }
 
-
 #purple-heli-homepage {
     display: inline-block;
     height: 106px;
     width: 118px;
 }
 
-#yellow-heli-homepage{
+#yellow-heli-homepage {
     display: inline-block;
     height: 150px;
     width: 159px;
@@ -161,9 +176,12 @@ nav {
 
 #green-star-homepage {
     display: block;
+    width: 155px;
+    height: 149px;
 }
 
 #home-title {
+    width: 100%;
     color: #04915F;
     font-weight: normal;
 }
