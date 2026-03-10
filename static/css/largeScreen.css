@@ -149,12 +149,14 @@ nav {
 /* ====================================== PEOPLE STYLING ====================================== */
 
 #people-title {
+    padding-left: 10%;
     color: #63058C;
 }
 
 .people-headings {
     color: #04915F;
     padding-bottom: 30px;
+    padding-left: 10%;
 }
 
 /* --- Principal Investigator --- */
@@ -197,7 +199,6 @@ nav {
     width: 350px;
     height: 350px;
     flex-shrink: 0;
-    margin: 0 auto;
 }
 
 .headshots {
@@ -227,6 +228,12 @@ nav {
     justify-content: center;
     align-items: center;
 }
+.headshots-tan img,
+.headshots-purple img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+}
 
 /* --- SVG arc overlay --- */
 .headshot-wrap svg {
@@ -244,12 +251,11 @@ h3.person-name {
     display: none;
 }
 
-/* --- Alumni --- */
 .alumni-student {
     display: inline-block;
 }
 
-.alumni-headshots {
+.alumni-container {
     height: 200px;
     width: 200px;
     border-radius: 50%;

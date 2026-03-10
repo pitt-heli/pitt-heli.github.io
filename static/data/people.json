@@ -3,7 +3,8 @@
     {
       "name":"Raquel Coelho",
       "image":"./static/images/headshots/Raquel Coelho.png",
-      "bio": "Raquel Coelho is an Assistant Professor of Emerging Technologies and Learning Sciences at Pitt's School of Computing and Information, with a joint appointment as Research Scientist at the Learning Research and Development Center (LRDC) and a secondary appointment at the School of Education. She holds a PhD in Learning Sciences and Technology Design from Stanford University, is a founding member of the Learning Sciences Brazil Affiliate of the International Society of the Learning Sciences, and serves as Director of the Network of Academic Programs in the Learning Sciences (NAPLeS). Outside of research, Raquel enjoys running, music, and being in the moment."
+      "bio": "Raquel Coelho is an Assistant Professor of Emerging Technologies and Learning Sciences at Pitt's School of Computing and Information, with a joint appointment as Research Scientist at the Learning Research and Development Center (LRDC) and a secondary appointment at the School of Education. She holds a PhD in Learning Sciences and Technology Design from Stanford University, is a founding member of the Learning Sciences Brazil Affiliate of the International Society of the Learning Sciences, and serves as Director of the Network of Academic Programs in the Learning Sciences (NAPLeS). Outside of research, Raquel enjoys running, music, and being in the moment.",
+      "linkedin": ""
     }
   ],
 
@@ -11,12 +12,14 @@
     {
       "name": "Ye Deng",
       "image": "./static/images/headshots/Ye Deng.JPG",
-      "bio": "Ye Eden Deng is a first-year PhD student in the Information Science program at the University of Pittsburgh. Her research interests lie at the intersection of learning sciences and human-AI interaction. She is particularly interested in how feedback, self-regulated learning, and intelligent tools shape learning experiences."
+      "bio": "Ye Eden Deng is a first-year PhD student in the Information Science program at the University of Pittsburgh. Her research interests lie at the intersection of learning sciences and human-AI interaction. She is particularly interested in how feedback, self-regulated learning, and intelligent tools shape learning experiences.",
+      "linkedin": ""
     },
     {
       "name": "Raja",
-      "image": "./static/images/logos/yellow-star.png",
-      "bio": "Raja (RJ) is a second-year PhD student at the University of Pittsburgh Department of Computer Science. He is passionate about using technology to improve outcomes education, as well as making quantum computing accessible to as many people as possible. RJ is an avid reader and spends much of his time reading fantasy, sci-fi, math books, and even history."
+      "image": "./static/images/headshots/Raja.jpeg",
+      "bio": "Raja (RJ) is a second-year PhD student at the University of Pittsburgh Department of Computer Science. He is passionate about using technology to improve outcomes education, as well as making quantum computing accessible to as many people as possible. RJ is an avid reader and spends much of his time reading fantasy, sci-fi, math books, and even history.",
+      "linkedin": ""
     }
   ],
 
@@ -24,49 +27,58 @@
     {
       "name": "David Neumann",
       "image": "./static/images/headshots/David Neumann.jpeg",
-      "bio": "David is a third-year, non-traditional student at the University of Pittsburgh double-majoring in Statistics and Data Science. Drawing on a diverse background with wide-ranging professional experience, his academic interests center on leveraging his technical skills in ways that serve the public interest. David plans to pursue graduate school, where he intends to specialize in advanced statistical modeling to ensure emerging technologies remain safe, transparent, and aligned with the public good."
+      "bio": "David is a third-year, non-traditional student at the University of Pittsburgh double-majoring in Statistics and Data Science. Drawing on a diverse background with wide-ranging professional experience, his academic interests center on leveraging his technical skills in ways that serve the public interest. David plans to pursue graduate school, where he intends to specialize in advanced statistical modeling to ensure emerging technologies remain safe, transparent, and aligned with the public good.",
+      "linkedin": ""
     },
     {
       "name": "Eliza Callahan",
       "image": "./static/images/headshots/Eliza Callahan.jpeg",
-      "bio": "Eliza is a fourth-year student at the University of Pittsburgh studying Computational Biology and French. She is also pursuing a learning sciences distinction and is passionate about technology as a means to improve learning and educational opportunities. Eliza is on the Pitt rowing team and spends much of her free time rowing on the Allegheny River."
+      "bio": "Eliza is a fourth-year student at the University of Pittsburgh studying Computational Biology and French. She is also pursuing a learning sciences distinction and is passionate about technology as a means to improve learning and educational opportunities. Eliza is on the Pitt rowing team and spends much of her free time rowing on the Allegheny River.",
+      "linkedin": ""
     },
     {
       "name": "Keira Tubbs",
       "image": "./static/images/headshots/Keira Tubbs.jpg",
-      "bio": "Keira is a second-year student at the University of Pittsburgh majoring in mathematical biology and minoring in statistics. She is passionate about doing data analysis and using psychology to improve learning among students. In her free time, Keira enjoys running with her friends."
+      "bio": "Keira is a second-year student at the University of Pittsburgh majoring in mathematical biology and minoring in statistics. She is passionate about doing data analysis and using psychology to improve learning among students. In her free time, Keira enjoys running with her friends.",
+      "linkedin": ""
     },
     {
       "name": "Kendra Go",
       "image": "./static/images/headshots/Kendra Go.jpeg",
-      "bio": "Kendra is a second-year student at the University of Pittsburgh studying Information Science and Digital Narrative & Interactive Design, along with a certificate in Digital Media. She is passionate about design and the ways in which technology can both improve and become more accessible. Outside of academics, she enjoys completing crosswords, baking, and discovering new media to watch and listen to."
+      "bio": "Kendra is a second-year student at the University of Pittsburgh studying Information Science and Digital Narrative & Interactive Design, along with a certificate in Digital Media. She is passionate about design and the ways in which technology can both improve and become more accessible. Outside of academics, she enjoys completing crosswords, baking, and discovering new media to watch and listen to.",
+      "linkedin": ""
     },
     {
       "name": "Nishika Sundara",
       "image": "./static/images/headshots/Nishika Sundara.jpeg",
-      "bio": "Nishika is a first-year student at the University of Pittsburgh studying Psychology with a Business minor. She is also pursuing a certificate in Conceptual Foundations in Medicine as she is interested in how to improve human behavior in a clinical setting. Nishika is quite fascinated by music and is currently learning how to play the ukulele in her free time."
+      "bio": "Nishika is a first-year student at the University of Pittsburgh studying Psychology with a Business minor. She is also pursuing a certificate in Conceptual Foundations in Medicine as she is interested in how to improve human behavior in a clinical setting. Nishika is quite fascinated by music and is currently learning how to play the ukulele in her free time.",
+      "linkedin": ""
     },
     {
       "name": "Theresa Vazapphilly",
       "image": "./static/images/headshots/Theresa Vazapphilly.jpg",
-      "bio": "Theresa is a third-year student at the University of Pittsburgh studying Information Science and Digital Narrative and Interactive Design with a minor in Business. She is interested in UX and Product Design to create interactive, accessible technology. Theresa is also involved in Omega Phi Alpha, a service sorority at Pitt where she volunteers within the Pittsburgh community."
+      "bio": "Theresa is a third-year student at the University of Pittsburgh studying Information Science and Digital Narrative and Interactive Design with a minor in Business. She is interested in UX and Product Design to create interactive, accessible technology. Theresa is also involved in Omega Phi Alpha, a service sorority at Pitt where she volunteers within the Pittsburgh community.",
+      "linkedin": ""
     },
     {
       "name": "Yifei Tian",
       "image": "./static/images/headshots/Yifei Tian.jpg",
-      "bio": "Yifei is a third-year Computer Science student at the University of Pittsburgh with a minor in information science. He wants to build practical applications that can easily help people across a wide array of issues. Yifei loves exploring the city of Pittsburgh and can be found roaming Squirrel Hill or the Waterfront."
+      "bio": "Yifei is a third-year Computer Science student at the University of Pittsburgh with a minor in information science. He wants to build practical applications that can easily help people across a wide array of issues. Yifei loves exploring the city of Pittsburgh and can be found roaming Squirrel Hill or the Waterfront.",
+      "linkedin": ""
     },
     {
       "name": "Andrew Boria",
       "image": "./static/images/logos/purple-heli.png",
       "imageWrapper": "headshots-tan",
-      "bio": null
+      "bio": null,
+      "linkedin": ""
     },
     {
       "name": "Ella Negley",
       "image": "./static/images/logos/green-heli.png",
       "imageWrapper": "headshots-purple",
-      "bio": null
+      "bio": null,
+      "linkedin": ""
     }
   ],
 

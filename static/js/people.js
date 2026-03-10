@@ -78,22 +78,49 @@ function renderAlumni(alumni, containerId) {
 }
 
 function applyArcNames() {
-  document.querySelectorAll('.student').forEach((card, i) => {
-    const h3 = card.querySelector('h3.person-name');
-    const img = card.querySelector('img.headshots');
-    if (!h3 || !img) return;
+  // First pass: collect all cards and compute a uniform font size
+  const cards = [...document.querySelectorAll('.student')].filter(card => {
+    return card.querySelector('h3.person-name') &&
+      (card.querySelector('img.headshots') || card.querySelector('.headshots-tan, .headshots-purple'));
+  });
 
+  // Use a fixed reference size so all names scale identically
+  const REFERENCE_SIZE = 350;
+  const r = REFERENCE_SIZE / 2 + 10;
+  const arcLength = Math.PI * r; // half-circumference (the visible arc)
+  const MAX_FONT = 26;
+  const MIN_FONT = 12;
+
+  // Find the longest name to set a shared font size across all cards
+  const longestName = cards.reduce((max, card) => {
+    const name = card.querySelector('h3.person-name').textContent.trim();
+    return name.length > max ? name.length : max;
+  }, 0);
+
+  // Approx chars-per-em ~0.55 — solve for font size that fits longest name
+  const sharedFontSize = Math.min(MAX_FONT, Math.max(MIN_FONT,
+    Math.floor(arcLength / (longestName * 0.55))
+  ));
+
+  cards.forEach((card, i) => {
+    const h3 = card.querySelector('h3.person-name');
+    const imgEl = card.querySelector('img.headshots') ||
+      card.querySelector('.headshots-tan img, .headshots-purple img');
+    const wrapEl = card.querySelector('img.headshots')
+      ? card.querySelector('img.headshots')
+      : card.querySelector('.headshots-tan, .headshots-purple');
+
+    if (!imgEl) return;
     const name = h3.textContent.trim();
-    const size = img.offsetWidth || 160;
-    const r = size / 2 + 10;
+    const size = REFERENCE_SIZE;
     const cx = size / 2;
     const cy = size / 2;
     const id = `arc-${i}`;
 
     const wrap = document.createElement('div');
     wrap.className = 'headshot-wrap';
-    img.parentNode.insertBefore(wrap, img);
-    wrap.appendChild(img);
+    wrapEl.parentNode.insertBefore(wrap, wrapEl);
+    wrap.appendChild(wrapEl);
 
     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     svg.setAttribute('viewBox', `0 0 ${size} ${size}`);
@@ -101,14 +128,10 @@ function applyArcNames() {
       <defs>
         <path id="${id}" d="M ${cx - r},${cy} a ${r},${r} 0 0,1 ${r * 2},0"/>
       </defs>
-      <text font-size="24" font-weight="bold" fill="#111" letter-spacing="0.5">
+      <text font-size="${sharedFontSize}" font-weight="bold" fill="#111" letter-spacing="0.5">
         <textPath href="#${id}" startOffset="50%" text-anchor="middle">${name}</textPath>
       </text>`;
 
     wrap.appendChild(svg);
   });
-}
-
-function alumni() {
-
 }
