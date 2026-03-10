@@ -10,6 +10,9 @@ async function setup() {
   renderAlumni(data.alumni_students, 'alumni-container');
 
   applyArcNames(); // ← run once after all sections are rendered
+
+  document.body.style.visibility = 'visible'; // ← reveal after render
+
 }
 
 function renderPI(pi, containerId) {
