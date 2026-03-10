@@ -148,10 +148,6 @@ nav {
 
 /* ====================================== PEOPLE STYLING ====================================== */
 
-#raquel-section {
-    display: flex;
-}
-
 #people-title {
     color: #63058C;
 }
@@ -161,67 +157,47 @@ nav {
     padding-bottom: 30px;
 }
 
-/* .headshots {
-    height: 411px;
-    width: 411px;
-    border-radius: 50%;
-} */
-
-.headshots-tan {
-    background-color: tan;
-    height: 411px;
-    width: 411px;
-    border-radius: 50%;
+/* --- Principal Investigator --- */
+#raquel-section .student {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
-
-    img {
-        width: 250px;
-        height: 250px;
-    }
+    gap: 40px;
+    width: 100%;
+    text-align: left;
+}
+#raquel-section .headshot-wrap {
+    flex-shrink: 0;
 }
 
-.headshots-purple {
-    background-color: purple;
-    height: 411px;
-    width: 411px;
-    border-radius: 50%;
+#raquel-section p {
+    flex: 1;
+    margin: 0;
+    align-self: center;
+}
+
+/* --- Student grid --- */
+#phd-students-container,
+#undergrad-students-container,
+#alumni-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-
-    img {
-        width: 250px;
-        height: 250px;
-
-    }
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 30px;
 }
-
-.alumni-student {
-    display: inline-block;
-}
-
-.alumni-headshots {
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-}
-
 
 .student {
-    width: 20%;
-    margin: 0px 50px 50px 0px;
+    width: 30%;
     text-align: center;
-    display: inline-block;
 }
 
-/* Wrapper injected by JS around the img */
+/* --- Headshot wrappers --- */
 .headshot-wrap {
     position: relative;
     width: 350px;
     height: 350px;
     flex-shrink: 0;
+    margin: 0 auto;
 }
 
 .headshots {
@@ -232,7 +208,27 @@ nav {
     display: block;
 }
 
-/* SVG arc overlay */
+.headshots-tan {
+    background-color: tan;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headshots-purple {
+    background-color: purple;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- SVG arc overlay --- */
 .headshot-wrap svg {
     position: absolute;
     top: 0;
@@ -243,11 +239,32 @@ nav {
     pointer-events: none;
 }
 
-/* Hide the original h3 */
+/* --- Hide original h3 (replaced by SVG arc) --- */
 h3.person-name {
     display: none;
 }
 
+/* --- Alumni --- */
+.alumni-student {
+    display: inline-block;
+}
+
+.alumni-headshots {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+#alumni-container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+#alumni-container .student {
+    flex: 1;
+    width: auto;
+}
 /* ====================================== CLASSES STYLING (Zhuoyan)====================================== */
 
 /* ====================================== PROJECTS STYLING (Zhuoyan) ====================================== */
