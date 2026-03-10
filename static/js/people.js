@@ -22,11 +22,14 @@ function renderPI(pi, containerId) {
   const div = document.createElement('div');
   div.className = 'student';
 
-  div.innerHTML = `
-    <h3 class="person-name">${pi.name}</h3>
-    <img class="headshots" src="${pi.image}" alt="${pi.name}">
+div.innerHTML = `
+  <h3 class="person-name">${pi.name}</h3>
+  <img class="headshots" src="${pi.image}" alt="${pi.name}">
+  <div class="pi-text">
     <p>${pi.bio}</p>
-  `;
+    ${pi.linkedin ? `<a class="linkedin-link" href="${pi.linkedin}" target="_blank">LinkedIn ↗</a>` : ''}
+  </div>
+`;
 
   container.appendChild(div);
 }
@@ -53,11 +56,16 @@ function renderStudents(students, containerId) {
       ? `<p>${student.bio}</p>`
       : '';
 
-    div.innerHTML = `
-      <h3 class="person-name">${student.name}</h3>
-      ${imgHTML}
-      ${bioHTML}
-    `;
+const linkedinHTML = student.linkedin
+  ? `<a class="linkedin-link" href="${student.linkedin}" target="_blank">LinkedIn ↗</a>`
+  : '';
+
+div.innerHTML = `
+  <h3 class="person-name">${student.name}</h3>
+  ${imgHTML}
+  ${bioHTML}
+  ${linkedinHTML}
+`;
 
     container.appendChild(div);
   });
