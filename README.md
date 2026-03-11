@@ -1,6 +1,7 @@
-# pitt-heli.github.io
-This is the University Of Pittsburgh's HELI Lab Portfolio Website. This site showcases the HELI labs 
-members, projects, publications, classes, and how to join the lab if you are interested. 
+# University Of Pittsburgh's HELI Lab
+This is the University Of Pittsburgh's HUMAN-CENTERED ENVIRONMENTS FOR LEARNING INNOVATION Lab 
+Portfolio Website. This site showcases the HELI labs members, projects, publications, classes, and 
+how to join the lab if you are interested. 
 
 
 # People 
