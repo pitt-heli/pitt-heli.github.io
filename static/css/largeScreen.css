@@ -5,19 +5,23 @@ body {
 }
 
 nav {
-    margin: 10px;
     width: 100%;
     display: flex;
+    align-items: center;
     justify-content: center;
 
     ul {
+        display: flex;
+        flex-direction: row;
         align-items: center;
+        margin: 0;
+        padding: 0;
         float: right;
 
         li {
             display: inline-block;
             list-style: none;
-            margin: 10px 20px;
+            margin: 10px 30px;
 
             a {
                 text-decoration: none;
@@ -160,6 +164,10 @@ nav {
 }
 
 /* --- Principal Investigator --- */
+#raquel-section {
+    margin-left: 10%;
+}
+
 #raquel-section .student {
     display: flex;
     flex-direction: row;
@@ -180,6 +188,10 @@ nav {
 #raquel-section .student {
     max-width: 100%;
 }
+.pi-text {
+    width: 55%;
+    font-size: 22px;
+}
 
 /* --- Student grid --- */
 #phd-students-container {
@@ -187,11 +199,10 @@ nav {
     flex-wrap: wrap;
     align-items: flex-start;
     gap: 90px;
-    padding: 40px;
+    margin-left: 10%;
 }
 
-#undergrad-students-container,
-#alumni-container {
+#undergrad-students-container {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -199,9 +210,16 @@ nav {
     gap: 90px;
     padding: 40px;
 }
-#alumni-container .headshot-wrap {
-    max-width: 200px;
+
+#alumni-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: left;
+    margin-left: 10%;
+    padding: 40px;
 }
+
 
 .student {
     width: 35%;
@@ -210,12 +228,6 @@ nav {
 }
 
 /* --- Headshot wrappers --- */
-/* .headshot-wrap {
-    position: relative;
-    width: 350px;
-    height: 350px;
-    flex-shrink: 0;
-} */
 
 .headshot-wrap {
     position: relative;
@@ -223,8 +235,12 @@ nav {
     max-width: 350px;
     aspect-ratio: 1 / 1;
     flex-shrink: 0;
-    margin: 0 auto;
 }
+#alumni-container .headshot-wrap {
+    max-width: 250px;
+    margin: 0px;
+}
+
 .headshots {
     width: 100%;
     height: 100%;
@@ -316,12 +332,20 @@ h3.person-name {
     display: flex;
     flex-wrap: nowrap;
     align-items: flex-start;
-    justify-content: space-between;
+    gap: 5%;
 }
 
 #alumni-container .student {
-    flex: 1;
+    flex: 0 0 auto;
     width: auto;
+}
+
+.student:nth-child(odd) {
+    margin-top: 0px;
+}
+
+.student:nth-child(even) {
+    margin-top: 50px;
 }
 /* ====================================== CLASSES STYLING (Zhuoyan)====================================== */
 
