@@ -182,12 +182,20 @@ nav {
 }
 
 /* --- Student grid --- */
-#phd-students-container,
+#phd-students-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 90px;
+    padding: 40px;
+}
+
 #undergrad-students-container,
 #alumni-container {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
+    justify-content: center;
     gap: 90px;
     padding: 40px;
 }
@@ -196,8 +204,8 @@ nav {
 }
 
 .student {
-    width: 30%;
-    max-width: 350px;
+    width: 35%;
+    max-width: 400px;
     text-align: left;
 }
 
