@@ -46,6 +46,7 @@ nav {
     font-size: 12px;
 
     img {
+        margin: 60px 0 80px 0;
         width: 106px;
         height: 118px;
     }
@@ -198,17 +199,15 @@ nav {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    gap: 90px;
+    gap: 40px;
     margin-left: 10%;
 }
 
 #undergrad-students-container {
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 90px;
-    padding: 40px;
+    gap: 40px;
+    margin-left: 10%;
 }
 
 #alumni-container {
@@ -332,7 +331,7 @@ h3.person-name {
     display: flex;
     flex-wrap: nowrap;
     align-items: flex-start;
-    gap: 5%;
+    gap: 40px;
 }
 
 #alumni-container .student {
