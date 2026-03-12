@@ -44,6 +44,6 @@ To remove a person from the JSON file you will need to find the person and where
     * Delete everything from starting curly brace to closing curly brace 
 
 ### Updating People
-Making updates to a person in this database is quite easy; you find the desired person to update and
+Making updates to a person in this database is quite simple; you find the desired person to update and
 then inside their respective curly brace you modify either their `name`, `image`, `bio`, or `linkedin`
 with the desired changes. 
