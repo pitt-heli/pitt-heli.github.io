@@ -331,7 +331,7 @@ h3.person-name {
     display: flex;
     flex-wrap: nowrap;
     align-items: flex-start;
-    gap: 40px;
+    gap: 80px;
 }
 
 #alumni-container .student {
