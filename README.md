@@ -50,50 +50,41 @@ with the desired changes.
 
 
 # Projects
-The Projects page is built from the HTML structure in `./projects.html`, the page-specific styling in
-`./static/css/projects.css`, and the expand/collapse behavior in `./static/js/projects.js`.
-Each project is represented by one `<article class="project-card">` block inside the
-`<div class="projects-list">` container.
+The Projects page is populated through the JSON file located at `./static/data/projects.json`.
+The HTML container lives in `./projects.html`, the page-specific styling lives in
+`./static/css/projects.css`, and the expand/collapse behavior plus rendering logic live in
+`./static/js/projects.js`.
+Each project in the JSON file becomes one project card on the page.
 
 ## Projects Template
-``` HTML
-<article class="project-card" id="project-example">
-    <button class="project-card-toggle" type="button" aria-expanded="false" aria-controls="project-example-content">
-        <span class="project-card-title">PROJECT NAME</span>
-        <span class="project-card-summary-action">Know more <span aria-hidden="true">↓</span></span>
-    </button>
-    <div class="project-card-content" id="project-example-content" hidden>
-        <p>Your full project description goes here.</p>
-        <div class="project-card-footer">
-            <a href="#" class="project-card-link">Link</a>
-            <button class="project-card-close" type="button" aria-label="Collapse PROJECT NAME details">×</button>
-        </div>
-    </div>
-</article>
+``` JSON
+{
+    "id": "project-id",
+    "title": "PROJECT NAME",
+    "description": "Your full project description goes here.",
+    "link": "https://example.com",
+    "modifierClass": ""
+}
 ```
 
 ### Adding Projects
-To add a new project, open `./projects.html` and find the `<div class="projects-list">` section.
-Copy one existing `<article class="project-card">` block and paste it below the last project.
+To add a new project, open `./static/data/projects.json` and add a new JSON object to the array.
 Then update the following values:
-- The outer `id`, for example `project-example`
-- The `aria-controls` value on the toggle button
-- The inner content `id` on the `.project-card-content`
-- The visible project title
-- The description text
-- The `href` on the `Link`
-- The `aria-label` on the close button
+- `id`: a short unique id such as `project-id`
+- `title`: the project name shown on the card
+- `description`: the full project description
+- `link`: the destination for the `Link`
+- `modifierClass`: leave this as `""` unless a special layout class is added in CSS later
 
 ### Removing Projects
-To remove a project, delete the full `<article class="project-card"> ... </article>` block for that project
-from `./projects.html`.
+To remove a project, delete its full JSON object from `./static/data/projects.json`.
 
 ### Updating Projects
-To update project content, edit the matching project card in `./projects.html`.
+To update project content, edit the matching object in `./static/data/projects.json`.
 Common updates include:
-- Change the title in `.project-card-title`
-- Change the description inside `.project-card-content p`
-- Replace `href="#"` with the real project URL
+- Change `title`
+- Change `description`
+- Replace `link` with the real project URL
 
 If you need to adjust spacing, colors, card sizes, or footer/header appearance on the Projects page,
 make those changes in `./static/css/projects.css`.
@@ -101,36 +92,34 @@ If you need to change how the expand/collapse interaction works, edit `./static/
 
 
 # Classes
-The Classes page is built from the HTML structure in `./classes.html` and the page-specific styling in
-`./static/css/classes.css`.
-Each class is represented by one `<article class="class-card">` block inside the
-`<div class="classes-grid">` container.
+The Classes page is populated through the JSON file located at `./static/data/classes.json`.
+The HTML container lives in `./classes.html`, and the page-specific styling lives in
+`./static/css/classes.css`. Rendering logic lives in `./static/js/classes.js`.
+Each class in the JSON file becomes one class card on the page.
 
 ## Classes Template
-``` HTML
-<article class="class-card">
-    <h2>COURSE TITLE</h2>
-    <div class="class-card-body">
-        <p>Your full course description goes here.</p>
-    </div>
-</article>
+``` JSON
+{
+    "title": "COURSE TITLE",
+    "description": "Your full course description goes here.",
+    "modifierClass": ""
+}
 ```
 
 ### Adding Classes
-To add a new class, open `./classes.html` and find the `<div class="classes-grid">` section.
-Copy one existing `<article class="class-card">` block and paste it where you want the new class to appear.
+To add a new class, open `./static/data/classes.json` and add a new JSON object to the array.
 Then update:
-- The course title in the `<h2>`
-- The course description in the `<p>`
+- `title`
+- `description`
+- `modifierClass`
 
 If you want the new card to be vertically offset like the current staggered layout, you can reuse or add
 class names such as `class-card-offset` and then define the spacing in `./static/css/classes.css`.
 
 ### Removing Classes
-To remove a class, delete the full `<article class="class-card"> ... </article>` block for that class
-from `./classes.html`.
+To remove a class, delete its full JSON object from `./static/data/classes.json`.
 
 ### Updating Classes
-To update a class, edit the corresponding card in `./classes.html`.
+To update a class, edit the corresponding object in `./static/data/classes.json`.
 If you need to change layout, card width, spacing, colors, header styling, or footer spacing on this page,
 make those changes in `./static/css/classes.css`.
