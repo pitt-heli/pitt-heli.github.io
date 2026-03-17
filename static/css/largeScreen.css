@@ -338,179 +338,273 @@ h3.person-name {
 
 /* ====================================== PROSPECTS STYLING (Mitchell) ====================================== */
 
+.prospects-main {
+    flex: 1;
+    max-width: 860px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 3rem 2rem 4rem;
+}
+
+/* ── Page title ── */
+.prospects-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+    color: #04915F;
+    margin-bottom: 2.5rem;
+    opacity: 0;
+    transform: translateY(-8px);
+    animation: fadeDown 0.6s ease forwards;
+}
+
+.prospects-title em {
+    font-style: italic;
+}
+
+/* ── Block: wraps title + bordered box ── */
+.prospects-block {
+    margin-bottom: 2.5rem;
+    opacity: 0;
+    transform: translateY(14px);
+}
+
+.prospects-block.visible {
+    animation: fadeUp 0.55s ease forwards;
+}
+
+/* ── Block title: sits just above the border ── */
+.block-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    letter-spacing: 0.04em;
+    color: #1a1a1a;
+    margin-bottom: -1px;
+    padding-left: 2rem;
+}
+
+/* ── Bordered box: position relative so dot can be absolute ── */
+.block-box {
+    border: 2px solid rgba(0, 0, 0, 0.15);
+    padding: 1.5rem 1.8rem;
+    position: relative;
+}
+
+/* ── Dot: absolutely positioned at top corner of .block-box ── */
+.block-dot {
+    position: absolute;
+    top: -18px;
+    right: -18px; /* default: right corner (gold/pitt) */
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+/* Green and purple go on the LEFT corner */
+.dot-grad,
+.dot-nonpitt {
+    right: auto;
+    left: -18px;
+}
+
+.dot-grad    { background: #04915F; }
+.dot-pitt    { background: #C1A362; }
+.dot-nonpitt { background: #63058C; }
+
+/* ── Body text ── */
+.section-body {
+    font-size: 0.84rem;
+    line-height: 1.8;
+    color: #2a2a2a;
+    font-weight: 400;
+}
+
+.section-body strong {
+    font-weight: 600;
+    color: #111;
+}
+
+.section-body a {
+    color: #04915F;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color 0.2s ease;
+}
+
+.section-body a:hover {
+    color: #036644;
+}
+
+/* ── Pitt block: two-column layout ── */
+.pitt-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    align-items: stretch;
+}
+
+/* Left column: title + FE-R box */
+.pitt-left {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Right column: NOUR pushed to bottom */
+.pitt-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-top: 17.7rem
+}
+
+.nour-box {
+    width: 100%;
+    background: transparent;
+}
+
+.nour-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 600;
+    font-size: 0.86rem;
+    color: #111;
+    letter-spacing: 0.02em;
+}
+
+/* ── Graduate and Non-Pitt — narrower ── */
+.grad-section .block-box,
+.nonpitt-section .block-box {
+    max-width: 520px;
+}
+
+/* ── Pitt block — shifted left of graduate ── */
+.pitt-block {
+    margin-left: -10rem;
+}
+
+/* ── Graduate section — purple title and text ── */
+.prospects-block.grad-section .block-title       { color: #63058C; }
+.prospects-block.grad-section .section-body      { color: #63058C; }
+.prospects-block.grad-section .section-body strong { color: #63058C; }
+.prospects-block.grad-section .section-body a      { color: #63058C; }
+ 
+/* ── Pitt undergrad section — green title and text ── */
+.pitt-block .block-title         { color: #04915F; }
+.pitt-block .section-body        { color: #04915F; }
+.pitt-block .section-body strong { color: #04915F; }
+.pitt-block .nour-title          { color: #04915F; }
+
 /* ====================================== PUBLICATIONS STYLING (Mitchell) ====================================== */
 
-:root {
-  --green-deep: #04915F;
-  --green-mid: #1f7d54;
-  --green-bright: #27935f;
-  --green-light: #2eab6e;
-  --card-bg: #1b7550;
-  --card-border: rgba(255, 255, 255, 0.15);
-  --text-primary: #f0ede4;
-  --text-secondary: rgba(240, 237, 228, 0.75);
-  --accent: #f0ede4;
-  --link: #a8e6c8;
-}
- 
-/* ── Main content area ── */
 .page-main {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 3rem 2rem;
-  background: linear-gradient(160deg, var(--green-mid) 0%, var(--green-deep) 100%);
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+    background: #04915F;
 }
- 
-/* ── Outer wrapper ── */
+
+/* ── Publications wrapper ── */
 .publications-wrapper {
-  width: 100%;
-  max-width: 760px;
-  padding: 2.5rem 2.5rem 2rem;
-  position: relative;
+    width: 100%;
+    max-width: 760px;
+    padding: 2.5rem 2.5rem 2rem;
+    position: relative;
 }
- 
-/* Corner accent lines */
-.publications-wrapper::before,
-.publications-wrapper::after {
-  content: '';
-  position: absolute;
-  width: 18px;
-  height: 18px;
-}
- 
-.publications-wrapper::before {
-  top: -2px;
-  left: -2px;
-  border-top: 3px solid var(--text-primary);
-  border-left: 3px solid var(--text-primary);
-}
- 
-.publications-wrapper::after {
-  bottom: -2px;
-  right: -2px;
-  border-bottom: 3px solid var(--text-primary);
-  border-right: 3px solid var(--text-primary);
-}
- 
+
 /* ── Section title ── */
 .section-title {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-style: italic;
-  font-size: 2rem;
-  font-weight: 400;
-  letter-spacing: 0.12em;
-  color: var(--text-primary);
-  text-align: center;
-  margin-bottom: 2rem;
-  opacity: 0;
-  transform: translateY(-10px);
-  animation: fadeDown 0.6s ease forwards;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    color: #f0ede4;
+    text-align: left;
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeDown 0.6s ease forwards;
 }
- 
+
 /* ── Publications list ── */
 .publications-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
 }
- 
+
 /* ── Publication card ── */
 .pub-card {
-  border: 1px solid var(--card-border);
-  padding: 1.1rem 1.3rem;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 1.2rem;
-  position: relative;
-  transition: background 0.25s ease;
-  opacity: 0;
-  transform: translateY(12px);
-  cursor: default;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    padding: 1.1rem 1.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.2rem;
+    position: relative;
+    transition: background 0.25s ease;
+    opacity: 0;
+    transform: translateY(12px);
+    cursor: default;
 }
- 
+
 .pub-card + .pub-card {
-  border-top: none;
+    border-top: none;
 }
- 
+
 .pub-card:hover {
-  background: rgba(255, 255, 255, 0.07);
+    background: rgba(255, 255, 255, 0.07);
 }
- 
+
 .pub-card.visible {
-  animation: fadeUp 0.5s ease forwards;
+    animation: fadeUp 0.5s ease forwards;
 }
- 
+
 /* ── Card text ── */
 .pub-text {
-  flex: 1;
-  font-size: 0.82rem;
-  line-height: 1.6;
-  color: var(--text-primary);
-  font-weight: 300;
+    flex: 1;
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: #f0ede4;
+    font-weight: 300;
 }
- 
+
 .pub-text strong {
-  font-weight: 400;
+    font-weight: 400;
 }
- 
+
 /* ── View link ── */
 .pub-link {
-  flex-shrink: 0;
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  font-size: 0.78rem;
-  color: var(--link);
-  text-decoration: none;
-  letter-spacing: 0.03em;
-  margin-top: 2px;
-  transition: color 0.2s ease, letter-spacing 0.2s ease;
-  white-space: nowrap;
+    align-self: flex-end;
+    flex-shrink: 0;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.78rem;
+    color: #a8e6c8;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    letter-spacing: 0.03em;
+    margin-top: 2px;
+    transition: color 0.2s ease, letter-spacing 0.2s ease;
+    white-space: nowrap;
 }
- 
+
 .pub-link:hover {
-  color: var(--text-primary);
-  letter-spacing: 0.07em;
+    color: #f0ede4;
+    letter-spacing: 0.07em;
 }
- 
-/* ── Scroll arrow ── */
-.scroll-arrow {
-  position: absolute;
-  right: -2rem;
-  bottom: 3rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  opacity: 0.6;
-}
- 
-.scroll-arrow span {
-  display: block;
-  width: 1px;
-  height: 28px;
-  background: var(--text-primary);
-}
- 
-.scroll-arrow svg {
-  fill: none;
-  stroke: var(--text-primary);
-  stroke-width: 1.5;
-  animation: arrowBob 1.6s ease-in-out infinite;
-}
- 
+
 /* ── Animations ── */
-@keyframes arrowBob {
-  0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(4px); }
-}
- 
 @keyframes fadeDown {
-  to { opacity: 1; transform: translateY(0); }
+    to { opacity: 1; transform: translateY(0); }
 }
- 
+
 @keyframes fadeUp {
-  to { opacity: 1; transform: translateY(0); }
+    to { opacity: 1; transform: translateY(0); }
 }
