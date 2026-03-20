@@ -47,3 +47,79 @@ To remove a person from the JSON file you will need to find the person and where
 Making updates to a person in this database is quite simple; you find the desired person to update and
 then inside their respective curly brace you modify either their `name`, `image`, `bio`, or `linkedin`
 with the desired changes. 
+
+
+# Projects
+The Projects page is populated through the JSON file located at `./static/data/projects.json`.
+The HTML container lives in `./projects.html`, the page-specific styling lives in
+`./static/css/projects.css`, and the expand/collapse behavior plus rendering logic live in
+`./static/js/projects.js`.
+Each project in the JSON file becomes one project card on the page.
+
+## Projects Template
+``` JSON
+{
+    "id": "project-id",
+    "title": "PROJECT NAME",
+    "description": "Your full project description goes here.",
+    "link": "https://example.com",
+    "modifierClass": ""
+}
+```
+
+### Adding Projects
+To add a new project, open `./static/data/projects.json` and add a new JSON object to the array.
+Then update the following values:
+- `id`: a short unique id such as `project-id`
+- `title`: the project name shown on the card
+- `description`: the full project description
+- `link`: the destination for the `Link`
+- `modifierClass`: leave this as `""` unless a special layout class is added in CSS later
+
+### Removing Projects
+To remove a project, delete its full JSON object from `./static/data/projects.json`.
+
+### Updating Projects
+To update project content, edit the matching object in `./static/data/projects.json`.
+Common updates include:
+- Change `title`
+- Change `description`
+- Replace `link` with the real project URL
+
+If you need to adjust spacing, colors, card sizes, or footer/header appearance on the Projects page,
+make those changes in `./static/css/projects.css`.
+If you need to change how the expand/collapse interaction works, edit `./static/js/projects.js`.
+
+
+# Classes
+The Classes page is populated through the JSON file located at `./static/data/classes.json`.
+The HTML container lives in `./classes.html`, and the page-specific styling lives in
+`./static/css/classes.css`. Rendering logic lives in `./static/js/classes.js`.
+Each class in the JSON file becomes one class card on the page.
+
+## Classes Template
+``` JSON
+{
+    "title": "COURSE TITLE",
+    "description": "Your full course description goes here.",
+    "modifierClass": ""
+}
+```
+
+### Adding Classes
+To add a new class, open `./static/data/classes.json` and add a new JSON object to the array.
+Then update:
+- `title`
+- `description`
+- `modifierClass`
+
+If you want the new card to be vertically offset like the current staggered layout, you can reuse or add
+class names such as `class-card-offset` and then define the spacing in `./static/css/classes.css`.
+
+### Removing Classes
+To remove a class, delete its full JSON object from `./static/data/classes.json`.
+
+### Updating Classes
+To update a class, edit the corresponding object in `./static/data/classes.json`.
+If you need to change layout, card width, spacing, colors, header styling, or footer spacing on this page,
+make those changes in `./static/css/classes.css`.
