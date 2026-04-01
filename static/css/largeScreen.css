@@ -5,38 +5,38 @@ body {
     overflow-x:hidden;
 }
 
-nav {
+.header {
     width: 100%;
+    background: #fff;
+}
+
+.header nav {
+    width: 100%;
+}
+
+.header nav ul {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: clamp(22px, 3vw, 56px);
+    margin: 0;
+    padding: 18px 24px;
+    list-style: none;
+}
 
-    ul {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin: 0;
-        padding: 0;
-        float: right;
+.header nav li {
+    margin: 0;
+}
 
-        li {
-            display: inline-block;
-            list-style: none;
-            margin: 10px 30px;
+.header nav a {
+    color: #111;
+    font-size: clamp(0.7rem, 0.9vw, 0.95rem);
+    text-decoration: none;
+}
 
-            a {
-                text-decoration: none;
-                color: black;
-                font-size: 30px;
-            }
-
-            a.active {
-                color: black;
-                text-decoration: underline;
-                text-decoration-color: gold;
-            }
-        }
-    }
+.header nav a.active {
+    text-decoration: underline;
+    text-underline-offset: 0.16em;
 }
 
 .footer {
@@ -44,20 +44,32 @@ nav {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    font-size: 12px;
+    padding: 54px 0 44px;
+    background: #fff;
+}
 
-    img {
-        margin: 60px 0 80px 0;
-        width: 106px;
-        height: 118px;
-    }
+.footer img {
+    width: 60px;
+    height: auto;
+    margin: 0 0 40px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.35;
+}
+
+.footer p + p {
+    margin-top: 2px;
 }
 
 /* ====================================== HOMEPAGE STYLING ====================================== */
 
 .heli-logo {
-    height: 125px;
-    width: 125px;
+    width: clamp(66px, 7vw, 94px);
+    height: auto;
+    flex: 0 0 auto;
 }
 
 #homepage-main {
@@ -344,11 +356,12 @@ h3.person-name {
     width: 100%;
     margin: 0 auto;
     padding: 3rem 2rem 4rem;
+    font-family: 'DM Sans', sans-serif;
 }
 
 /* ── Page title ── */
 .prospects-title {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'DM Sans', sans-serif;
     font-weight: 400;
     font-size: 2rem;
     letter-spacing: 0.1em;
@@ -376,7 +389,7 @@ h3.person-name {
 
 /* ── Block title: sits just above the border ── */
 .block-title {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'DM Sans', sans-serif;
     font-weight: 400;
     font-size: 1.2rem;
     letter-spacing: 0.04em;
@@ -416,6 +429,7 @@ h3.person-name {
 
 /* ── Body text ── */
 .section-body {
+    font-family: 'DM Sans', sans-serif;
     font-size: 0.84rem;
     line-height: 1.8;
     color: #2a2a2a;
@@ -466,7 +480,7 @@ h3.person-name {
 }
 
 .nour-title {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'DM Sans', sans-serif;
     font-weight: 600;
     font-size: 0.86rem;
     color: #111;
@@ -505,6 +519,7 @@ h3.person-name {
     justify-content: center;
     padding: 3rem 2rem;
     background: #04915F;
+    font-family: 'DM Sans', sans-serif;
 }
 
 /* ── Publications wrapper ── */
@@ -517,7 +532,7 @@ h3.person-name {
 
 /* ── Section title ── */
 .section-title {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'DM Sans', sans-serif;
     font-style: italic;
     font-size: 2rem;
     font-weight: 400;
@@ -569,6 +584,7 @@ h3.person-name {
 /* ── Card text ── */
 .pub-text {
     flex: 1;
+    font-family: 'DM Sans', sans-serif;
     font-size: 0.82rem;
     line-height: 1.6;
     color: #f0ede4;
@@ -583,7 +599,7 @@ h3.person-name {
 .pub-link {
     align-self: flex-end;
     flex-shrink: 0;
-    font-family: 'Playfair Display', serif;
+    font-family: 'DM Sans', sans-serif;
     font-style: italic;
     font-size: 0.78rem;
     color: #a8e6c8;
