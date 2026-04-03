@@ -312,10 +312,10 @@ nav {
 }
 #green-box {
     position: absolute;
-    bottom: -90px;
-    right: -90px;
-    width: 160px;
-    height: 160px;
+    bottom: -60px;
+    right: -60px;
+    width: 120px;
+    height: 120px;
     background-color: #2e7d5e;
     border-radius: 50%;
     display: flex;
@@ -324,8 +324,8 @@ nav {
 }
 
 .white-heli-logo {
-    width: 97px;
-    height: 97px;
+    width: 77px;
+    height: 77px;
 }
 
 #hompage-box-textbox {
@@ -333,13 +333,13 @@ nav {
     justify-content: center;
     align-items: center;
     font-family: inherit;
-    width: 800px;
+    width: 700px;
     padding: 30px;
     height: 300px;
     border: 1.5px solid black;
     border-radius: 4px;
     background: #fff;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.6;
     box-sizing: border-box;
     pointer-events: none;
@@ -349,21 +349,21 @@ nav {
 
 #purple-heli-homepage {
     display: inline-block;
-    height: 110px;
-    width: 110px;
+    height: 100px;
+    width: 100px;
 }
 
 #yellow-heli-homepage {
     display: inline-block;
-    height: 150px;
-    width: 159px;
+    height: 100px;
+    width: 100px;
 }
 
 #green-star-homepage {
         justify-content: center;
     align-items: center;
-    width: 155px;
-    height: 149px;
+    width: 110px;
+    height: 110px;
 }
 
 #home-title {
@@ -371,6 +371,10 @@ nav {
     color: #04915F;
     font-weight: normal;
     margin-left: 5%;
+    h1{
+        font-size: 28px;
+    }
+
 }
 
 #home-title .bold {
@@ -440,16 +444,18 @@ nav {
 #undergrad-students-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    column-gap: 200px;
+    row-gap: 50px;
     margin-left: 10%;
+    margin-right: 10%;
+    
 }
 
 #alumni-container {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: left;
-    margin-left: 10%;
+    justify-content: center;
     gap: 80px;
 }
 
