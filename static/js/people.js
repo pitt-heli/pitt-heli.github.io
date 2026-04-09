@@ -16,6 +16,20 @@ async function setup() {
   // Once all sections are rendered, setup the arced names
   applyArcNames();
 
+  // Staggered fade-in for headings and student cards
+  const headings = document.querySelectorAll('#people-title, .people-headings');
+  const cards = document.querySelectorAll('.student');
+
+  headings.forEach((heading) => {
+    heading.classList.add('visible');
+  });
+
+  cards.forEach((card, i) => {
+    setTimeout(() => {
+      card.classList.add('visible');
+    }, 200 + i * 180);
+  });
+
   // To prevent footer from flashing before people are rendered only show the body after the page is loaded
   document.body.style.visibility = 'visible';
 

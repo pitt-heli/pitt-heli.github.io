@@ -385,6 +385,18 @@ nav {
     font-style: italic;
     font-weight: lighter;
 }
+#home-title,
+#homepage-main,
+#homepage-belowBox {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+#home-title.visible,
+#homepage-main.visible,
+#homepage-belowBox.visible {
+  opacity: 1;
+}
 
 /* ====================================== PEOPLE STYLING ====================================== */
 
@@ -398,7 +410,16 @@ nav {
     margin: 50px 0px 50px 10%;
     padding-bottom: 20px
 }
+#people-title,
+.people-headings {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
 
+#people-title.visible,
+.people-headings.visible {
+  opacity: 1;
+}
 /* --- Principal Investigator --- */
 #raquel-section {
     margin-left: 10%;
@@ -463,6 +484,12 @@ nav {
     width: 35%;
     max-width: 400px;
     text-align: left;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.student.visible {
+  opacity: 1;
 }
 
 /* --- Headshot wrappers --- */
