@@ -291,7 +291,7 @@ nav {
     /* padding-left: 10%; */
     display: inline-block;
     align-content: end;
-    margin: 0 auto 100px auto;
+    margin: 0 2.5% 100px 2.5%;
 }
 
 #homepage-box {
@@ -303,7 +303,7 @@ nav {
 
 #homepage-rightOfBox {
     display: inline-block;
-    margin: 0 auto 0 auto;
+    margin: 0 2.5% 0 2.5%;
 }
 #homepage-belowBox {
     display: flex;
@@ -333,9 +333,9 @@ nav {
     justify-content: center;
     align-items: center;
     font-family: inherit;
-    width: 700px;
+    width: 100%;
     padding: 30px;
-    height: 300px;
+    height: auto;
     border: 1.5px solid black;
     border-radius: 4px;
     background: #fff;
@@ -449,7 +449,7 @@ nav {
 }
 
 .pi-text {
-    width: 55%;
+    width: 50%;
     font-size: 22px;
 }
 
@@ -582,6 +582,18 @@ h3.person-name {
     margin-top: 50px;
 }
 
+#back-to-top {
+    position: fixed;
+    transform: s;
+    right: 30px;
+    top: 45%;
+    float: right;
+    scroll-behavior: smooth;
+
+    img {
+        height: auto;
+        width: 26px;
+    }
 /* ====================================== PROSPECTS STYLING (Mitchell) ====================================== */
 
 .prospects-main {
