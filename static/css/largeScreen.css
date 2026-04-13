@@ -357,6 +357,20 @@ h3.person-name {
     margin-top: 50px;
 }
 
+#back-to-top {
+    position: fixed;
+    transform: s;
+    right: 48px;
+    top: 45%;
+    float: right;
+    scroll-behavior: smooth;
+
+    img {
+        height: auto;
+        width: 26px;
+    }
+}
+
 /* ====================================== CLASSES STYLING (Zhuoyan)====================================== */
 .classes-page {
     width: 100%;

@@ -442,7 +442,7 @@ nav {
 }
 
 .pi-text {
-    width: 55%;
+    width: 45%;
     font-size: 15px;
 }
 
@@ -577,4 +577,18 @@ h3.person-name {
 
 .student:nth-child(even) {
     margin-top: 50px;
+}
+
+#back-to-top {
+    position: fixed;
+    transform: s;
+    right: 30px;
+    top: 45%;
+    float: right;
+    scroll-behavior: smooth;
+
+    img {
+        height: auto;
+        width: 26px;
+    }
 }
