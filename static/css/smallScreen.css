@@ -591,4 +591,245 @@ h3.person-name {
         height: auto;
         width: 26px;
     }
+/* ====================================== PROSPECTS STYLING (Mitchell) ====================================== */
+
+.prospects-main {
+    flex: 1;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1.5rem 1.2rem 2.5rem;
+    font-family: 'DM Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+.prospects-title {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    letter-spacing: 0.08em;
+    color: #04915F;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    transform: translateY(-8px);
+    animation: fadeDown 0.6s ease forwards;
+}
+
+.prospects-title em {
+    font-style: italic;
+}
+
+.prospects-block {
+    margin-bottom: 1.8rem;
+    opacity: 0;
+    transform: translateY(14px);
+}
+
+.prospects-block.visible {
+    animation: fadeUp 0.55s ease forwards;
+}
+
+.block-title {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+    color: #1a1a1a;
+    margin-bottom: -1px;
+    padding-left: 1rem;
+}
+
+.block-box {
+    border: 2px solid rgba(0, 0, 0, 0.15);
+    padding: 1.1rem 1.2rem;
+    position: relative;
+}
+
+.block-dot {
+    position: absolute;
+    top: -14px;
+    right: -14px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.dot-grad,
+.dot-nonpitt {
+    right: auto;
+    left: -14px;
+}
+
+.dot-grad    { background: #04915F; }
+.dot-pitt    { background: #C1A362; }
+.dot-nonpitt { background: #63058C; }
+
+.section-body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.7;
+    color: #2a2a2a;
+    font-weight: 400;
+}
+
+.section-body strong {
+    font-weight: 600;
+    color: #111;
+}
+
+.section-body a {
+    color: #04915F;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color 0.2s ease;
+}
+
+.section-body a:hover {
+    color: #036644;
+}
+
+/* Pitt block: single column on small screens */
+.pitt-block {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    margin-left: 0;
+}
+
+.pitt-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.pitt-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 0;
+}
+
+.nour-box {
+    width: 100%;
+    background: transparent;
+}
+
+.nour-title {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.82rem;
+    color: #111;
+    letter-spacing: 0.02em;
+}
+
+.grad-section .block-box,
+.nonpitt-section .block-box {
+    max-width: none;
+}
+
+/* ── Color overrides ── */
+.prospects-block.grad-section .block-title        { color: #63058C; }
+.prospects-block.grad-section .section-body       { color: #63058C; }
+.prospects-block.grad-section .section-body strong { color: #63058C; }
+.prospects-block.grad-section .section-body a      { color: #63058C; }
+
+.pitt-block .block-title         { color: #04915F; }
+.pitt-block .section-body        { color: #04915F; }
+.pitt-block .section-body strong { color: #04915F; }
+.pitt-block .nour-title          { color: #04915F; }
+
+/* ====================================== PUBLICATIONS STYLING (Mitchell) ====================================== */
+
+.page-main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 1rem;
+    background: #04915F;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.publications-wrapper {
+    width: 100%;
+    max-width: 100%;
+    padding: 1.5rem 0.8rem 1rem;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.section-title {
+    font-family: 'DM Sans', sans-serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: #f0ede4;
+    text-align: left;
+    padding-left: 0.8rem;
+    margin-bottom: 1.2rem;
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeDown 0.6s ease forwards;
+}
+
+.publications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.pub-card {
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    padding: 0.9rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.8rem;
+    position: relative;
+    transition: background 0.25s ease;
+    opacity: 0;
+    transform: translateY(12px);
+    cursor: default;
+}
+
+.pub-card + .pub-card {
+    border-top: none;
+}
+
+.pub-card:hover {
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.pub-card.visible {
+    animation: fadeUp 0.5s ease forwards;
+}
+
+.pub-text {
+    flex: 1;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem;
+    line-height: 1.55;
+    color: #f0ede4;
+    font-weight: 300;
+}
+
+.pub-text strong {
+    font-weight: 400;
+}
+
+.pub-link {
+    align-self: flex-end;
+    flex-shrink: 0;
+    font-family: 'DM Sans', sans-serif;
+    font-style: italic;
+    font-size: 0.74rem;
+    color: #a8e6c8;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    letter-spacing: 0.03em;
+    margin-top: 2px;
+    transition: color 0.2s ease, letter-spacing 0.2s ease;
+    white-space: nowrap;
 }
