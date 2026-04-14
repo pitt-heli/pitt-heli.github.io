@@ -608,8 +608,9 @@ h3.person-name {
 .student:nth-child(even) {
     margin-top: 50px;
 }
-/* ====================================== PROSPECTS STYLING (Mitchell) ====================================== */
 
+/* ====================================== PROSPECTS STYLING (Mitchell) ====================================== */
+ 
 .prospects-main {
     flex: 1;
     max-width: 100%;
@@ -619,7 +620,7 @@ h3.person-name {
     font-family: 'DM Sans', sans-serif;
     box-sizing: border-box;
 }
-
+ 
 .prospects-title {
     font-family: 'DM Sans', sans-serif;
     font-weight: 400;
@@ -631,21 +632,21 @@ h3.person-name {
     transform: translateY(-8px);
     animation: fadeDown 0.6s ease forwards;
 }
-
+ 
 .prospects-title em {
     font-style: italic;
 }
-
+ 
 .prospects-block {
     margin-bottom: 1.8rem;
     opacity: 0;
     transform: translateY(14px);
 }
-
+ 
 .prospects-block.visible {
     animation: fadeUp 0.55s ease forwards;
 }
-
+ 
 .block-title {
     font-family: 'DM Sans', sans-serif;
     font-weight: 400;
@@ -655,13 +656,13 @@ h3.person-name {
     margin-bottom: -1px;
     padding-left: 1rem;
 }
-
+ 
 .block-box {
     border: 2px solid rgba(0, 0, 0, 0.15);
     padding: 1.1rem 1.2rem;
     position: relative;
 }
-
+ 
 .block-dot {
     position: absolute;
     top: -14px;
@@ -671,17 +672,17 @@ h3.person-name {
     border-radius: 50%;
     z-index: 2;
 }
-
+ 
 .dot-grad,
 .dot-nonpitt {
     right: auto;
     left: -14px;
 }
-
+ 
 .dot-grad    { background: #04915F; }
 .dot-pitt    { background: #C1A362; }
 .dot-nonpitt { background: #63058C; }
-
+ 
 .section-body {
     font-family: 'DM Sans', sans-serif;
     font-size: 0.8rem;
@@ -689,23 +690,23 @@ h3.person-name {
     color: #2a2a2a;
     font-weight: 400;
 }
-
+ 
 .section-body strong {
     font-weight: 600;
     color: #111;
 }
-
+ 
 .section-body a {
     color: #04915F;
     text-decoration: underline;
     text-underline-offset: 2px;
     transition: color 0.2s ease;
 }
-
+ 
 .section-body a:hover {
     color: #036644;
 }
-
+ 
 /* Pitt block: single column on small screens */
 .pitt-block {
     display: flex;
@@ -713,24 +714,24 @@ h3.person-name {
     gap: 1.8rem;
     margin-left: 0;
 }
-
+ 
 .pitt-left {
     display: flex;
     flex-direction: column;
 }
-
+ 
 .pitt-right {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     padding-top: 0;
 }
-
+ 
 .nour-box {
     width: 100%;
     background: transparent;
 }
-
+ 
 .nour-title {
     font-family: 'DM Sans', sans-serif;
     font-weight: 600;
@@ -738,25 +739,25 @@ h3.person-name {
     color: #111;
     letter-spacing: 0.02em;
 }
-
+ 
 .grad-section .block-box,
 .nonpitt-section .block-box {
     max-width: none;
 }
-
+ 
 /* ── Color overrides ── */
 .prospects-block.grad-section .block-title        { color: #63058C; }
 .prospects-block.grad-section .section-body       { color: #63058C; }
 .prospects-block.grad-section .section-body strong { color: #63058C; }
 .prospects-block.grad-section .section-body a      { color: #63058C; }
-
+ 
 .pitt-block .block-title         { color: #04915F; }
 .pitt-block .section-body        { color: #04915F; }
 .pitt-block .section-body strong { color: #04915F; }
 .pitt-block .nour-title          { color: #04915F; }
-
+ 
 /* ====================================== PUBLICATIONS STYLING (Mitchell) ====================================== */
-
+ 
 .page-main {
     flex: 1;
     display: flex;
@@ -766,7 +767,7 @@ h3.person-name {
     background: #04915F;
     font-family: 'DM Sans', sans-serif;
 }
-
+ 
 .publications-wrapper {
     width: 100%;
     max-width: 100%;
@@ -774,7 +775,7 @@ h3.person-name {
     position: relative;
     box-sizing: border-box;
 }
-
+ 
 .section-title {
     font-family: 'DM Sans', sans-serif;
     font-style: italic;
@@ -789,13 +790,13 @@ h3.person-name {
     transform: translateY(-10px);
     animation: fadeDown 0.6s ease forwards;
 }
-
+ 
 .publications-list {
     display: flex;
     flex-direction: column;
     gap: 0;
 }
-
+ 
 .pub-card {
     border: 2px solid rgba(255, 255, 255, 0.15);
     padding: 0.9rem 1rem;
@@ -810,19 +811,19 @@ h3.person-name {
     transform: translateY(12px);
     cursor: default;
 }
-
+ 
 .pub-card + .pub-card {
     border-top: none;
 }
-
+ 
 .pub-card:hover {
     background: rgba(255, 255, 255, 0.07);
 }
-
+ 
 .pub-card.visible {
     animation: fadeUp 0.5s ease forwards;
 }
-
+ 
 .pub-text {
     flex: 1;
     font-family: 'DM Sans', sans-serif;
@@ -831,11 +832,11 @@ h3.person-name {
     color: #f0ede4;
     font-weight: 300;
 }
-
+ 
 .pub-text strong {
     font-weight: 400;
 }
-
+ 
 .pub-link {
     align-self: flex-end;
     flex-shrink: 0;
@@ -849,4 +850,18 @@ h3.person-name {
     margin-top: 2px;
     transition: color 0.2s ease, letter-spacing 0.2s ease;
     white-space: nowrap;
+}
+ 
+.pub-link:hover {
+    color: #f0ede4;
+    letter-spacing: 0.07em;
+}
+ 
+/* ── Animations ── */
+@keyframes fadeDown {
+    to { opacity: 1; transform: translateY(0); }
+}
+ 
+@keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
 }
