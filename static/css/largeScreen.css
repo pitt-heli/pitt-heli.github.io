@@ -378,6 +378,21 @@ h3.person-name {
     letter-spacing: 0.08em;
 }
 
+.classes-page .classes-hero h1,
+.classes-page .class-card,
+.classes-page .classes-back-to-top {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.classes-page .classes-hero h1.visible,
+.classes-page .class-card.visible,
+.classes-page .classes-back-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .classes-page .classes-grid {
     display: grid;
     grid-template-columns: minmax(280px, 1fr) minmax(280px, 1fr);
@@ -460,6 +475,21 @@ h3.person-name {
     font-style: italic;
     font-weight: 400;
     letter-spacing: 0.06em;
+}
+
+.projects-page .projects-hero h1,
+.projects-page .project-card,
+.projects-page .projects-back-to-top {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.projects-page .projects-hero h1.visible,
+.projects-page .project-card.visible,
+.projects-page .projects-back-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .projects-page .projects-list {
