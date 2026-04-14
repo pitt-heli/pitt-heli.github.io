@@ -723,7 +723,6 @@ h3.person-name {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     column-gap: 0;
-    row-gap: 3rem;
 }
  
 .pitt-left {
