@@ -74,16 +74,35 @@ nav {
     letter-spacing: 0.08em;
 }
 
+.classes-page .classes-hero h1,
+.classes-page .class-card,
+.classes-page .classes-back-to-top {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.classes-page .classes-hero h1.visible,
+.classes-page .class-card.visible,
+.classes-page .classes-back-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .classes-page .classes-grid {
     display: grid;
-    grid-template-columns: minmax(240px, 1fr) minmax(240px, 1fr);
+    grid-template-columns: repeat(2, minmax(320px, 420px));
     gap: 58px 64px;
     align-items: start;
+    justify-content: space-between;
+    width: min(100%, 980px);
     max-width: 980px;
+    margin: 0 auto;
 }
 
 .classes-page .class-card {
-    max-width: 100%;
+    width: 100%;
+    max-width: 420px;
     background: #cfb6d9;
     border: 1px solid #2d1639;
 }
@@ -154,6 +173,21 @@ nav {
     font-style: italic;
     font-weight: 400;
     letter-spacing: 0.06em;
+}
+
+.projects-page .projects-hero h1,
+.projects-page .project-card,
+.projects-page .projects-back-to-top {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.projects-page .projects-hero h1.visible,
+.projects-page .project-card.visible,
+.projects-page .projects-back-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .projects-page .projects-list {
@@ -291,7 +325,7 @@ nav {
     /* padding-left: 10%; */
     display: inline-block;
     align-content: end;
-    margin: 0 2.5% 100px 2.5%;
+    margin: 0 auto 100px auto;
 }
 
 #homepage-box {
@@ -303,7 +337,7 @@ nav {
 
 #homepage-rightOfBox {
     display: inline-block;
-    margin: 0 2.5% 0 2.5%;
+    margin: 0 auto 0 auto;
 }
 #homepage-belowBox {
     display: flex;
@@ -333,9 +367,9 @@ nav {
     justify-content: center;
     align-items: center;
     font-family: inherit;
-    width: 100%;
+    width: 700px;
     padding: 30px;
-    height: auto;
+    height: 300px;
     border: 1.5px solid black;
     border-radius: 4px;
     background: #fff;
@@ -449,7 +483,7 @@ nav {
 }
 
 .pi-text {
-    width: 50%;
+    width: 55%;
     font-size: 22px;
 }
 
@@ -580,20 +614,6 @@ h3.person-name {
 
 .student:nth-child(even) {
     margin-top: 50px;
-}
-
-#back-to-top {
-    position: fixed;
-    transform: s;
-    right: 30px;
-    top: 45%;
-    float: right;
-    scroll-behavior: smooth;
-
-    img {
-        height: auto;
-        width: 26px;
-    }
 }
 
 /* ====================================== PROSPECTS STYLING (Mitchell) ====================================== */
@@ -817,37 +837,4 @@ h3.person-name {
     line-height: 1.6;
     color: #f0ede4;
     font-weight: 300;
-}
-
-.pub-text strong {
-    font-weight: 400;
-}
-
-.pub-link {
-    align-self: flex-end;
-    flex-shrink: 0;
-    font-family: 'DM Sans', sans-serif;
-    font-style: italic;
-    font-size: 0.76rem;
-    color: #a8e6c8;
-    text-decoration: underline;
-    text-underline-offset: 2px;
-    letter-spacing: 0.03em;
-    margin-top: 2px;
-    transition: color 0.2s ease, letter-spacing 0.2s ease;
-    white-space: nowrap;
-}
-
-.pub-link:hover {
-    color: #f0ede4;
-    letter-spacing: 0.07em;
-}
-
-/* ── Animations ── */
-@keyframes fadeDown {
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeUp {
-    to { opacity: 1; transform: translateY(0); }
 }

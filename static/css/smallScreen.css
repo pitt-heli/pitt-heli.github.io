@@ -75,6 +75,21 @@ nav {
     letter-spacing: 0.08em;
 }
 
+.classes-page .classes-hero h1,
+.classes-page .class-card,
+.classes-page .classes-back-to-top {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.classes-page .classes-hero h1.visible,
+.classes-page .class-card.visible,
+.classes-page .classes-back-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .classes-page .classes-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -148,6 +163,21 @@ nav {
     font-style: italic;
     font-weight: 400;
     letter-spacing: 0.06em;
+}
+
+.projects-page .projects-hero h1,
+.projects-page .project-card,
+.projects-page .projects-back-to-top {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.projects-page .projects-hero h1.visible,
+.projects-page .project-card.visible,
+.projects-page .projects-back-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .projects-page .projects-list {
@@ -283,7 +313,7 @@ nav {
     /* padding-left: 10%; */
     display: inline-block;
     align-content: end;
-    margin: 0 1% 100px 1%;
+    margin: 0 auto 100px auto;
 }
 
 #homepage-box {
@@ -295,7 +325,7 @@ nav {
 
 #homepage-rightOfBox {
     display: inline-block;
-    margin: 0 1% 0 1%;
+    margin: 0 auto 0 auto;
 }
 #homepage-belowBox {
     display: flex;
@@ -325,9 +355,9 @@ nav {
     justify-content: center;
     align-items: center;
     font-family: inherit;
-    width: 100%;
+    width: 400px;
     padding: 30px;
-    height: auto;
+    height: 300px;
     border: 1.5px solid black;
     border-radius: 4px;
     background: #fff;
@@ -442,7 +472,7 @@ nav {
 }
 
 .pi-text {
-    width: 45%;
+    width: 55%;
     font-size: 15px;
 }
 
@@ -499,7 +529,7 @@ nav {
 }
 
 #alumni-container .headshot-wrap {
-    max-width: 175px;
+    max-width: 200px;
     margin: 0px;
 }
 
@@ -578,21 +608,6 @@ h3.person-name {
 .student:nth-child(even) {
     margin-top: 50px;
 }
-
-#back-to-top {
-    position: fixed;
-    transform: s;
-    right: 30px;
-    top: 45%;
-    float: right;
-    scroll-behavior: smooth;
-
-    img {
-        height: auto;
-        width: 26px;
-    }
-}
-
 /* ====================================== PROSPECTS STYLING (Mitchell) ====================================== */
 
 .prospects-main {
@@ -834,18 +849,4 @@ h3.person-name {
     margin-top: 2px;
     transition: color 0.2s ease, letter-spacing 0.2s ease;
     white-space: nowrap;
-}
-
-.pub-link:hover {
-    color: #f0ede4;
-    letter-spacing: 0.07em;
-}
-
-/* ── Animations ── */
-@keyframes fadeDown {
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeUp {
-    to { opacity: 1; transform: translateY(0); }
 }
