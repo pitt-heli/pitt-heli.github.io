@@ -592,6 +592,7 @@ h3.person-name {
         width: 26px;
     }
 }
+
 /* ====================================== PROSPECTS STYLING (Mitchell) ====================================== */
 
 .prospects-main {
@@ -835,6 +836,12 @@ h3.person-name {
     white-space: nowrap;
 }
 
+.pub-link:hover {
+    color: #f0ede4;
+    letter-spacing: 0.07em;
+}
+
+/* ── Animations ── */
 @keyframes fadeDown {
     to { opacity: 1; transform: translateY(0); }
 }

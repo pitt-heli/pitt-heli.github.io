@@ -595,6 +595,7 @@ h3.person-name {
         width: 26px;
     }
 }
+
 /* ====================================== PROSPECTS STYLING (Mitchell) ====================================== */
 
 .prospects-main {
@@ -818,6 +819,31 @@ h3.person-name {
     font-weight: 300;
 }
 
+.pub-text strong {
+    font-weight: 400;
+}
+
+.pub-link {
+    align-self: flex-end;
+    flex-shrink: 0;
+    font-family: 'DM Sans', sans-serif;
+    font-style: italic;
+    font-size: 0.76rem;
+    color: #a8e6c8;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    letter-spacing: 0.03em;
+    margin-top: 2px;
+    transition: color 0.2s ease, letter-spacing 0.2s ease;
+    white-space: nowrap;
+}
+
+.pub-link:hover {
+    color: #f0ede4;
+    letter-spacing: 0.07em;
+}
+
+/* ── Animations ── */
 @keyframes fadeDown {
     to { opacity: 1; transform: translateY(0); }
 }
