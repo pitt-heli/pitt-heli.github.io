@@ -5,6 +5,7 @@ async function setupClasses() {
   const classes = await response.json();
 
   renderClasses(classes, "classes-grid");
+  setupClassesAnimations();
   document.body.style.visibility = "visible";
 }
 
@@ -24,5 +25,17 @@ function renderClasses(classes, containerId) {
     `;
 
     container.appendChild(article);
+  });
+}
+
+function setupClassesAnimations() {
+  const elements = document.querySelectorAll(
+    ".classes-page .classes-hero h1, .classes-page .class-card, .classes-page .classes-back-to-top"
+  );
+
+  elements.forEach((element, index) => {
+    setTimeout(() => {
+      element.classList.add("visible");
+    }, 180 + index * 120);
   });
 }
