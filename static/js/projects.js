@@ -1,0 +1,68 @@
+document.addEventListener("DOMContentLoaded", setupProjects);
+
+async function setupProjects() {
+    const response = await fetch("./static/data/projects.json");
+    const projects = await response.json();
+
+    renderProjects(projects, "projects-list");
+    setupProjectToggles();
+    document.body.style.visibility = "visible";
+}
+
+function renderProjects(projects, containerId) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+
+    projects.forEach((project) => {
+        const article = document.createElement("article");
+        article.className = ["project-card", project.modifierClass].filter(Boolean).join(" ");
+        article.id = `project-${project.id}`;
+
+        const contentId = `project-${project.id}-content`;
+        const linkHref = project.link || "#";
+
+        article.innerHTML = `
+            <button class="project-card-toggle" type="button" aria-expanded="false" aria-controls="${contentId}">
+                <span class="project-card-title">${project.title}</span>
+                <span class="project-card-summary-action">Know more <span aria-hidden="true">↓</span></span>
+            </button>
+            <div class="project-card-content" id="${contentId}" hidden>
+                <p>${project.description}</p>
+                <div class="project-card-footer">
+                    <a href="${linkHref}" class="project-card-link">Link</a>
+                    <button class="project-card-close" type="button" aria-label="Collapse ${project.title} details">×</button>
+                </div>
+            </div>
+        `;
+
+        container.appendChild(article);
+    });
+}
+
+function setupProjectToggles() {
+    const cards = Array.from(document.querySelectorAll(".project-card"));
+
+    function setExpanded(card, expanded) {
+        const toggle = card.querySelector(".project-card-toggle");
+        const content = card.querySelector(".project-card-content");
+
+        card.classList.toggle("project-card-expanded", expanded);
+        toggle.setAttribute("aria-expanded", String(expanded));
+        content.hidden = !expanded;
+    }
+
+    cards.forEach((card) => {
+        const toggle = card.querySelector(".project-card-toggle");
+        const close = card.querySelector(".project-card-close");
+
+        toggle.addEventListener("click", () => {
+            const expanded = card.classList.contains("project-card-expanded");
+            setExpanded(card, !expanded);
+        });
+
+        close.addEventListener("click", (event) => {
+            event.stopPropagation();
+            setExpanded(card, false);
+        });
+    });
+}

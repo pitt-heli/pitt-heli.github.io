@@ -1,0 +1,835 @@
+/* ======================================= GLOBAL STYLING ======================================= */
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    overflow-x:hidden;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        float: right;
+
+        li {
+            display: inline-block;
+            list-style: none;
+            margin: 10px 15px;
+
+            a {
+                text-decoration: none;
+                color: black;
+                font-size: 12px;
+            }
+
+            a.active {
+                color: black;
+                text-decoration: underline;
+                text-decoration-color: gold;
+            }
+        }
+    }
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+    line-height: .25;
+
+    img {
+        margin: 30px 0 25px 0;
+        width: 110px;
+        height: 110px;
+    }
+}
+
+/* ====================================== CLASSES STYLING (Zhuoyan)====================================== */
+.classes-page {
+    width: 100%;
+    background: #f5f5f5;
+    color: #111;
+}
+
+.classes-page .classes-hero {
+    position: relative;
+    background: #7307a5;
+    padding: 34px 18px 64px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.classes-page .classes-hero h1 {
+    margin: 0 0 24px;
+    color: #c8ab62;
+    font-size: 2rem;
+    letter-spacing: 0.08em;
+}
+
+.classes-page .classes-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+}
+
+.classes-page .class-card,
+.classes-page .class-card-offset,
+.classes-page .class-card-bottom {
+    max-width: none;
+    margin-top: 0;
+    background: #cfb6d9;
+    border: 1px solid #2d1639;
+}
+
+.classes-page .class-card h2 {
+    margin: 0;
+    padding: 14px 14px 10px;
+    border-bottom: 1px solid #2d1639;
+    font-size: 1.1rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.classes-page .class-card-body {
+    padding: 10px 12px 8px;
+}
+
+.classes-page .class-card-body p {
+    margin: 0;
+    font-size: 0.96rem;
+    line-height: 1.35;
+}
+
+.classes-page .classes-back-to-top {
+    position: absolute;
+    top: 20px;
+    right: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+}
+
+.classes-page .classes-back-to-top img {
+    width: 24px;
+    height: auto;
+}
+
+
+/* ====================================== PROJECTS STYLING (Zhuoyan) ====================================== */
+.projects-page {
+    width: 100%;
+    background: #f5f5f5;
+    color: #111;
+}
+
+.projects-page .projects-hero {
+    position: relative;
+    min-height: auto;
+    padding: 34px 18px 72px;
+    background: #c8ab62;
+    font-family: "DM Sans", sans-serif;
+}
+
+.projects-page .projects-hero h1 {
+    margin: 0 0 34px;
+    color: #f9f2e6;
+    font-size: 2.2rem;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+}
+
+.projects-page .projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding-right: 0;
+}
+
+.projects-page .project-card,
+.projects-page .project-card:not(.project-card-expanded) {
+    max-width: none;
+    width: 100%;
+    background: #f4ecd9;
+    border: 2px solid #313131;
+    overflow: hidden;
+}
+
+.projects-page .project-card-toggle {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 16px 12px;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    text-align: left;
+}
+
+.projects-page .project-card-title {
+    font-size: 1.55rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.projects-page .project-card-summary-action {
+    display: none;
+    font-size: 0.92rem;
+    text-decoration: underline;
+    text-underline-offset: 0.16em;
+}
+
+.projects-page .project-card-content {
+    border-top: 2px solid #313131;
+    padding: 16px;
+}
+
+.projects-page .project-card-content p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.45;
+}
+
+.projects-page .project-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 22px;
+}
+
+.projects-page .project-card-link {
+    color: #111;
+    font-size: 0.95rem;
+    text-decoration: underline;
+    text-underline-offset: 0.16em;
+}
+
+.projects-page .project-card-close {
+    border: 0;
+    background: transparent;
+    color: #111;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.projects-page .project-card:not(.project-card-expanded) .project-card-summary-action {
+    display: inline;
+}
+
+.projects-page .project-card:not(.project-card-expanded) .project-card-toggle {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 18px 10px;
+}
+
+.projects-page .project-card:not(.project-card-expanded):nth-child(2) {
+    align-self: stretch;
+}
+
+.projects-page .project-card:not(.project-card-expanded) .project-card-summary-action {
+    width: calc(100% + 36px);
+    margin: 0 -18px -10px;
+    padding: 11px 18px 12px;
+    border-top: 2px solid #313131;
+}
+
+.projects-page .projects-back-to-top {
+    position: absolute;
+    right: 18px;
+    top: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+}
+
+.projects-page .projects-back-to-top img {
+    width: 26px;
+    height: auto;
+}
+
+/* ====================================== HOMEPAGE STYLING ====================================== */
+
+.heli-logo {
+    height: 67.5px;
+    width: 67.5px;
+}
+
+#homepage-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#homepage-leftOfBox {
+    /* padding-left: 10%; */
+    display: inline-block;
+    align-content: end;
+    margin: 0 1% 100px 1%;
+}
+
+#homepage-box {
+    margin-top: 25px;
+    position: relative;
+    display: inline-block;
+    /* padding: 30px 0px 0px 300px; */
+}
+
+#homepage-rightOfBox {
+    display: inline-block;
+    margin: 0 1% 0 1%;
+}
+#homepage-belowBox {
+    display: flex;
+    justify-content:center;
+    margin: 30px 65% 0 0;
+}
+#green-box {
+    position: absolute;
+    bottom: -45px;
+    right: -45px;
+    width: 80px;
+    height: 80px;
+    background-color: #2e7d5e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.white-heli-logo {
+    width: 48px;
+    height: 48px;
+}
+
+#hompage-box-textbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: inherit;
+    width: 100%;
+    padding: 30px;
+    height: auto;
+    border: 1.5px solid black;
+    border-radius: 4px;
+    background: #fff;
+    font-size: 12px;
+    line-height: 1.6;
+    box-sizing: border-box;
+    pointer-events: none;
+    cursor: default;
+    outline: none;
+}
+
+#purple-heli-homepage {
+    display: inline-block;
+    height: 55px;
+    width: 55px;
+}
+
+#yellow-heli-homepage {
+    display: inline-block;
+    height: 75px;
+    width: 75px;
+}
+
+#green-star-homepage {
+        justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 75px;
+}
+
+#home-title {
+    width: 100%;
+    color: #04915F;
+    font-weight: normal;
+    margin-left: 5%;
+    h1{
+        font-size: 14px;
+
+    }
+}
+
+#home-title .bold {
+    font-weight: bold;
+}
+
+#home-title .italic {
+    font-style: italic;
+    font-weight: lighter;
+}
+#home-title,
+#homepage-main,
+#homepage-belowBox {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+#home-title.visible,
+#homepage-main.visible,
+#homepage-belowBox.visible {
+  opacity: 1;
+}
+
+/* ====================================== PEOPLE STYLING ====================================== */
+
+#people-title {
+    padding-left: 10%;
+    color: #63058C;
+}
+
+.people-headings {
+    color: #04915F;
+    margin: 50px 0px 50px 10%;
+    padding-bottom: 20px
+}
+#people-title,
+.people-headings {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+#people-title.visible,
+.people-headings.visible {
+  opacity: 1;
+}
+
+/* --- Principal Investigator --- */
+#raquel-section {
+    margin-left: 10%;
+}
+
+#raquel-section .student {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    text-align: left;
+}
+
+#raquel-section .headshot-wrap {
+    flex-shrink: 0;
+}
+
+#raquel-section p {
+    flex: 1;
+    margin: 0;
+    align-self: center;
+}
+
+#raquel-section .student {
+    max-width: 100%;
+}
+
+.pi-text {
+    width: 45%;
+    font-size: 15px;
+}
+
+/* --- Student grid --- */
+#phd-students-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 40px;
+    margin-left: 10%;
+}
+
+#undergrad-students-container {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 100px;
+    row-gap: 50px; 
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#alumni-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto; 
+    row-gap: 40px; 
+    column-gap: 60px;
+}
+
+.student {
+    width: 35%;
+    max-width: 400px;
+    text-align: left;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.student.visible {
+  opacity: 1;
+}
+
+/* --- Headshot wrappers --- */
+.headshot-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 200px;
+    aspect-ratio: 1 / 1;
+    flex-shrink: 0;
+
+}
+
+#alumni-container .headshot-wrap {
+    max-width: 175px;
+    margin: 0px;
+}
+
+.headshots {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+.headshots-tan {
+    background-color: tan;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headshots-purple {
+    background-color: purple;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headshots-tan img,
+.headshots-purple img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+}
+
+/* --- SVG arc overlay --- */
+.headshot-wrap svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    pointer-events: none;
+}
+
+.linkedin-link {
+    display: block;
+    margin-top: 8px;
+    font-size: 14px;
+    color: black;
+    text-decoration: underline;
+}
+
+/* --- Hide original h3 (replaced by SVG arc) --- */
+h3.person-name {
+    display: none;
+}
+
+.alumni-student {
+    display: inline-block;
+}
+
+#alumni-container .student {
+    flex: 0 0 auto;
+    width: auto;
+}
+
+.student:nth-child(odd) {
+    margin-top: 0px;
+}
+
+.student:nth-child(even) {
+    margin-top: 50px;
+}
+
+#back-to-top {
+    position: fixed;
+    transform: s;
+    right: 30px;
+    top: 45%;
+    float: right;
+    scroll-behavior: smooth;
+
+    img {
+        height: auto;
+        width: 26px;
+    }
+/* ====================================== PROSPECTS STYLING (Mitchell) ====================================== */
+
+.prospects-main {
+    flex: 1;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1.5rem 1.2rem 2.5rem;
+    font-family: 'DM Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+.prospects-title {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    letter-spacing: 0.08em;
+    color: #04915F;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    transform: translateY(-8px);
+    animation: fadeDown 0.6s ease forwards;
+}
+
+.prospects-title em {
+    font-style: italic;
+}
+
+.prospects-block {
+    margin-bottom: 1.8rem;
+    opacity: 0;
+    transform: translateY(14px);
+}
+
+.prospects-block.visible {
+    animation: fadeUp 0.55s ease forwards;
+}
+
+.block-title {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+    color: #1a1a1a;
+    margin-bottom: -1px;
+    padding-left: 1rem;
+}
+
+.block-box {
+    border: 2px solid rgba(0, 0, 0, 0.15);
+    padding: 1.1rem 1.2rem;
+    position: relative;
+}
+
+.block-dot {
+    position: absolute;
+    top: -14px;
+    right: -14px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.dot-grad,
+.dot-nonpitt {
+    right: auto;
+    left: -14px;
+}
+
+.dot-grad    { background: #04915F; }
+.dot-pitt    { background: #C1A362; }
+.dot-nonpitt { background: #63058C; }
+
+.section-body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.7;
+    color: #2a2a2a;
+    font-weight: 400;
+}
+
+.section-body strong {
+    font-weight: 600;
+    color: #111;
+}
+
+.section-body a {
+    color: #04915F;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color 0.2s ease;
+}
+
+.section-body a:hover {
+    color: #036644;
+}
+
+/* Pitt block: single column on small screens */
+.pitt-block {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    margin-left: 0;
+}
+
+.pitt-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.pitt-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 0;
+}
+
+.nour-box {
+    width: 100%;
+    background: transparent;
+}
+
+.nour-title {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.82rem;
+    color: #111;
+    letter-spacing: 0.02em;
+}
+
+.grad-section .block-box,
+.nonpitt-section .block-box {
+    max-width: none;
+}
+
+/* ── Color overrides ── */
+.prospects-block.grad-section .block-title        { color: #63058C; }
+.prospects-block.grad-section .section-body       { color: #63058C; }
+.prospects-block.grad-section .section-body strong { color: #63058C; }
+.prospects-block.grad-section .section-body a      { color: #63058C; }
+
+.pitt-block .block-title         { color: #04915F; }
+.pitt-block .section-body        { color: #04915F; }
+.pitt-block .section-body strong { color: #04915F; }
+.pitt-block .nour-title          { color: #04915F; }
+
+/* ====================================== PUBLICATIONS STYLING (Mitchell) ====================================== */
+
+.page-main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 1rem;
+    background: #04915F;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.publications-wrapper {
+    width: 100%;
+    max-width: 100%;
+    padding: 1.5rem 0.8rem 1rem;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.section-title {
+    font-family: 'DM Sans', sans-serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: #f0ede4;
+    text-align: left;
+    padding-left: 0.8rem;
+    margin-bottom: 1.2rem;
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeDown 0.6s ease forwards;
+}
+
+.publications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.pub-card {
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    padding: 0.9rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.8rem;
+    position: relative;
+    transition: background 0.25s ease;
+    opacity: 0;
+    transform: translateY(12px);
+    cursor: default;
+}
+
+.pub-card + .pub-card {
+    border-top: none;
+}
+
+.pub-card:hover {
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.pub-card.visible {
+    animation: fadeUp 0.5s ease forwards;
+}
+
+.pub-text {
+    flex: 1;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem;
+    line-height: 1.55;
+    color: #f0ede4;
+    font-weight: 300;
+}
+
+.pub-text strong {
+    font-weight: 400;
+}
+
+.pub-link {
+    align-self: flex-end;
+    flex-shrink: 0;
+    font-family: 'DM Sans', sans-serif;
+    font-style: italic;
+    font-size: 0.74rem;
+    color: #a8e6c8;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    letter-spacing: 0.03em;
+    margin-top: 2px;
+    transition: color 0.2s ease, letter-spacing 0.2s ease;
+    white-space: nowrap;
+}

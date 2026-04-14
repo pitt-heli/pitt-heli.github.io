@@ -1,0 +1,23 @@
+[
+  {
+    "id": "q-jam",
+    "title": "Q-JAM",
+    "description": "Quantum mechanics is beginning to fundamentally change how information is processed, secured, and transmitted, yet most students never encounter these ideas in school. Q-JAM is a summer camp where students explore concepts like superposition, entanglement, and measurement, and their applications in computing, communication, and sensing, by redesigning familiar board games with a quantum twist. Working in teams, students brainstorm, prototype, and playtest their designs, consult with quantum experts, and present their games at a public showcase. Q-JAM invites students to sit with questions that even physicists haven't resolved, finding that uncertainty is not a barrier to understanding, but an invitation to wonder.",
+    "link": "#",
+    "modifierClass": ""
+  },
+  {
+    "id": "q-hubs",
+    "title": "Q-HUBS",
+    "description": "Q-HUBS is a regional model currently in development that aims to create lasting pathways into quantum literacy for students and educators across Pennsylvania. Building on the work of Q-JAM, it envisions a full pipeline of experiences, from summer camps and after-school clubs to teacher professional development, organized around a network of district hubs that enable regional collaboration and shared resources. The goal is to position students and educators not just to use future quantum technologies, but to understand, question, and shape them as they emerge.",
+    "link": "#",
+    "modifierClass": ""
+  },
+  {
+    "id": "vida",
+    "title": "VIDA",
+    "description": "Students bring rich knowledge and lived experiences to the classroom, yet these often go unrecognized in instruction. VIDA uses artificial intelligence to analyze large-scale student writing and surface the community concerns and experiences students from shared cultural communities bring to learning. The findings are translated into professional development resources that help teachers better understand and build on the knowledge their students bring from outside school.",
+    "link": "#",
+    "modifierClass": ""
+  }
+]

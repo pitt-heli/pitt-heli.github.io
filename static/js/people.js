@@ -16,6 +16,20 @@ async function setup() {
   // Once all sections are rendered, setup the arced names
   applyArcNames();
 
+  // Staggered fade-in for headings and student cards
+  const headings = document.querySelectorAll('#people-title, .people-headings');
+  const cards = document.querySelectorAll('.student');
+
+  headings.forEach((heading) => {
+    heading.classList.add('visible');
+  });
+
+  cards.forEach((card, i) => {
+    setTimeout(() => {
+      card.classList.add('visible');
+    }, 200 + i * 180);
+  });
+
   // To prevent footer from flashing before people are rendered only show the body after the page is loaded
   document.body.style.visibility = 'visible';
 
@@ -173,7 +187,7 @@ function applyArcNames() {
         <path id="${id}" d="M ${cx - r},${cy} a ${r},${r} 0 0,1 ${r * 2},0"/>
       </defs>
       <text font-size="${sharedFontSize}" font-weight="bold" fill="#111" letter-spacing="0.5">
-        <textPath href="#${id}" startOffset="50%" text-anchor="middle">${name}</textPath>
+        <textPath href="#${id}" startOffset="25%" text-anchor="middle">${name}</textPath>
       </text>`;
 
     wrap.appendChild(svg);
