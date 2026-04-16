@@ -6,6 +6,7 @@ async function setupProjects() {
 
     renderProjects(projects, "projects-list");
     setupProjectToggles();
+    setupProjectsAnimations();
     document.body.style.visibility = "visible";
 }
 
@@ -64,5 +65,17 @@ function setupProjectToggles() {
             event.stopPropagation();
             setExpanded(card, false);
         });
+    });
+}
+
+function setupProjectsAnimations() {
+    const elements = document.querySelectorAll(
+        ".projects-page .projects-hero h1, .projects-page .project-card, .projects-page .projects-back-to-top"
+    );
+
+    elements.forEach((element, index) => {
+        setTimeout(() => {
+            element.classList.add("visible");
+        }, 180 + index * 120);
     });
 }

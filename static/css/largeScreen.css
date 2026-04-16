@@ -73,19 +73,19 @@ nav {
     /* padding-left: 10%; */
     display: inline-block;
     align-content: end;
-    margin: 0 5% 100px 5%;
-    
+    margin: 0 auto 100px auto;
 }
 
 #homepage-box {
     margin-top: 50px;
     position: relative;
     display: inline-block;
+    /* padding: 30px 0px 0px 300px; */
 }
 
 #homepage-rightOfBox {
     display: inline-block;
-    margin: 0 5% 0 5%;
+    margin: 0 auto 0 auto;
 }
 #homepage-belowBox {
     display: flex;
@@ -115,9 +115,9 @@ nav {
     justify-content: center;
     align-items: center;
     font-family: inherit;
-    width: 100%;
+    width: 1200px;
     padding: 30px;
-    height: auto;
+    height: 500px;
     border: 1.5px solid black;
     border-radius: 4px;
     background: #fff;
@@ -365,20 +365,6 @@ h3.person-name {
     margin-top: 50px;
 }
 
-#back-to-top {
-    position: fixed;
-    transform: s;
-    right: 48px;
-    top: 45%;
-    float: right;
-    scroll-behavior: smooth;
-
-    img {
-        height: auto;
-        width: 26px;
-    }
-}
-
 /* ====================================== CLASSES STYLING (Zhuoyan)====================================== */
 .classes-page {
     width: 100%;
@@ -398,6 +384,21 @@ h3.person-name {
     color: #c8ab62;
     font-size: clamp(2rem, 3vw, 3rem);
     letter-spacing: 0.08em;
+}
+
+.classes-page .classes-hero h1,
+.classes-page .class-card,
+.classes-page .classes-back-to-top {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.classes-page .classes-hero h1.visible,
+.classes-page .class-card.visible,
+.classes-page .classes-back-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .classes-page .classes-grid {
@@ -482,6 +483,21 @@ h3.person-name {
     font-style: italic;
     font-weight: 400;
     letter-spacing: 0.06em;
+}
+
+.projects-page .projects-hero h1,
+.projects-page .project-card,
+.projects-page .projects-back-to-top {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.projects-page .projects-hero h1.visible,
+.projects-page .project-card.visible,
+.projects-page .projects-back-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .projects-page .projects-list {
@@ -606,7 +622,7 @@ h3.person-name {
 }
 
 /* ====================================== PROSPECTS STYLING (Mitchell) ====================================== */
-
+ 
 .prospects-main {
     flex: 1;
     max-width: 860px;
@@ -615,7 +631,7 @@ h3.person-name {
     padding: 3rem 2rem 4rem;
     font-family: 'DM Sans', sans-serif;
 }
-
+ 
 /* ── Page title ── */
 .prospects-title {
     font-family: 'DM Sans', sans-serif;
@@ -628,22 +644,22 @@ h3.person-name {
     transform: translateY(-8px);
     animation: fadeDown 0.6s ease forwards;
 }
-
+ 
 .prospects-title em {
     font-style: italic;
 }
-
+ 
 /* ── Block: wraps title + bordered box ── */
 .prospects-block {
     margin-bottom: 2.5rem;
     opacity: 0;
     transform: translateY(14px);
 }
-
+ 
 .prospects-block.visible {
     animation: fadeUp 0.55s ease forwards;
 }
-
+ 
 /* ── Block title: sits just above the border ── */
 .block-title {
     font-family: 'DM Sans', sans-serif;
@@ -654,14 +670,14 @@ h3.person-name {
     margin-bottom: -1px;
     padding-left: 2rem;
 }
-
+ 
 /* ── Bordered box: position relative so dot can be absolute ── */
 .block-box {
     border: 2px solid rgba(0, 0, 0, 0.15);
     padding: 1.5rem 1.8rem;
     position: relative;
 }
-
+ 
 /* ── Dot: absolutely positioned at top corner of .block-box ── */
 .block-dot {
     position: absolute;
@@ -672,18 +688,18 @@ h3.person-name {
     border-radius: 50%;
     z-index: 2;
 }
-
+ 
 /* Green and purple go on the LEFT corner */
 .dot-grad,
 .dot-nonpitt {
     right: auto;
     left: -18px;
 }
-
+ 
 .dot-grad    { background: #04915F; }
 .dot-pitt    { background: #C1A362; }
 .dot-nonpitt { background: #63058C; }
-
+ 
 /* ── Body text ── */
 .section-body {
     font-family: 'DM Sans', sans-serif;
@@ -692,50 +708,50 @@ h3.person-name {
     color: #2a2a2a;
     font-weight: 400;
 }
-
+ 
 .section-body strong {
     font-weight: 600;
     color: #111;
 }
-
+ 
 .section-body a {
     color: #04915F;
     text-decoration: underline;
     text-underline-offset: 2px;
     transition: color 0.2s ease;
 }
-
+ 
 .section-body a:hover {
     color: #036644;
 }
-
-/* ── Pitt block: two-column layout ── */
+ 
+/* ── Pitt block: 2-column × 2-row grid; left on row 1, right on row 2 creates the diagonal ── */
 .pitt-block {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0;
-    align-items: stretch;
+    grid-template-rows: auto auto;
+    column-gap: 0;
 }
-
-/* Left column: title + FE-R box */
+ 
 .pitt-left {
+    grid-column: 1;
+    grid-row: 1;
     display: flex;
     flex-direction: column;
 }
-
-/* Right column: NOUR pushed to bottom */
+ 
 .pitt-right {
+    grid-column: 2;
+    grid-row: 2;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    padding-top: 17.7rem
 }
-
+ 
 .nour-box {
     width: 100%;
     background: transparent;
 }
-
+ 
 .nour-title {
     font-family: 'DM Sans', sans-serif;
     font-weight: 600;
@@ -743,18 +759,18 @@ h3.person-name {
     color: #111;
     letter-spacing: 0.02em;
 }
-
+ 
 /* ── Graduate and Non-Pitt — narrower ── */
 .grad-section .block-box,
 .nonpitt-section .block-box {
     max-width: 520px;
 }
-
+ 
 /* ── Pitt block — shifted left of graduate ── */
 .pitt-block {
     margin-left: -10rem;
 }
-
+ 
 /* ── Graduate section — purple title and text ── */
 .prospects-block.grad-section .block-title       { color: #63058C; }
 .prospects-block.grad-section .section-body      { color: #63058C; }
@@ -766,9 +782,9 @@ h3.person-name {
 .pitt-block .section-body        { color: #04915F; }
 .pitt-block .section-body strong { color: #04915F; }
 .pitt-block .nour-title          { color: #04915F; }
-
+ 
 /* ====================================== PUBLICATIONS STYLING (Mitchell) ====================================== */
-
+ 
 .page-main {
     flex: 1;
     display: flex;
@@ -778,7 +794,7 @@ h3.person-name {
     background: #04915F;
     font-family: 'DM Sans', sans-serif;
 }
-
+ 
 /* ── Publications wrapper ── */
 .publications-wrapper {
     width: 100%;
@@ -786,7 +802,7 @@ h3.person-name {
     padding: 2.5rem 2.5rem 2rem;
     position: relative;
 }
-
+ 
 /* ── Section title ── */
 .section-title {
     font-family: 'DM Sans', sans-serif;
@@ -802,14 +818,14 @@ h3.person-name {
     transform: translateY(-10px);
     animation: fadeDown 0.6s ease forwards;
 }
-
+ 
 /* ── Publications list ── */
 .publications-list {
     display: flex;
     flex-direction: column;
     gap: 0;
 }
-
+ 
 /* ── Publication card ── */
 .pub-card {
     border: 2px solid rgba(255, 255, 255, 0.15);
@@ -825,19 +841,19 @@ h3.person-name {
     transform: translateY(12px);
     cursor: default;
 }
-
+ 
 .pub-card + .pub-card {
     border-top: none;
 }
-
+ 
 .pub-card:hover {
     background: rgba(255, 255, 255, 0.07);
 }
-
+ 
 .pub-card.visible {
     animation: fadeUp 0.5s ease forwards;
 }
-
+ 
 /* ── Card text ── */
 .pub-text {
     flex: 1;
@@ -847,11 +863,11 @@ h3.person-name {
     color: #f0ede4;
     font-weight: 300;
 }
-
+ 
 .pub-text strong {
     font-weight: 400;
 }
-
+ 
 /* ── View link ── */
 .pub-link {
     align-self: flex-end;
@@ -867,17 +883,18 @@ h3.person-name {
     transition: color 0.2s ease, letter-spacing 0.2s ease;
     white-space: nowrap;
 }
-
+ 
 .pub-link:hover {
     color: #f0ede4;
     letter-spacing: 0.07em;
 }
-
+ 
 /* ── Animations ── */
 @keyframes fadeDown {
     to { opacity: 1; transform: translateY(0); }
 }
-
+ 
 @keyframes fadeUp {
     to { opacity: 1; transform: translateY(0); }
 }
+ 

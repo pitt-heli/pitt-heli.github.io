@@ -75,16 +75,35 @@ nav {
     letter-spacing: 0.08em;
 }
 
+.classes-page .classes-hero h1,
+.classes-page .class-card,
+.classes-page .classes-back-to-top {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.classes-page .classes-hero h1.visible,
+.classes-page .class-card.visible,
+.classes-page .classes-back-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .classes-page .classes-grid {
     display: grid;
-    grid-template-columns: minmax(240px, 1fr) minmax(240px, 1fr);
+    grid-template-columns: repeat(2, minmax(320px, 420px));
     gap: 58px 64px;
     align-items: start;
+    justify-content: space-between;
+    width: min(100%, 980px);
     max-width: 980px;
+    margin: 0 auto;
 }
 
 .classes-page .class-card {
-    max-width: 100%;
+    width: 100%;
+    max-width: 420px;
     background: #cfb6d9;
     border: 1px solid #2d1639;
 }
@@ -155,6 +174,21 @@ nav {
     font-style: italic;
     font-weight: 400;
     letter-spacing: 0.06em;
+}
+
+.projects-page .projects-hero h1,
+.projects-page .project-card,
+.projects-page .projects-back-to-top {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.projects-page .projects-hero h1.visible,
+.projects-page .project-card.visible,
+.projects-page .projects-back-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .projects-page .projects-list {
@@ -293,7 +327,7 @@ nav {
     /* padding-left: 10%; */
     display: inline-block;
     align-content: end;
-    margin: 0 2.5% 100px 2.5%;
+    margin: 0 auto 100px auto;
 }
 
 #homepage-box {
@@ -305,7 +339,7 @@ nav {
 
 #homepage-rightOfBox {
     display: inline-block;
-    margin: 0 2.5% 0 2.5%;
+    margin: 0 auto 0 auto;
 }
 #homepage-belowBox {
     display: flex;
@@ -335,9 +369,9 @@ nav {
     justify-content: center;
     align-items: center;
     font-family: inherit;
-    width: 100%;
+    width: 700px;
     padding: 30px;
-    height: auto;
+    height: 300px;
     border: 1.5px solid black;
     border-radius: 4px;
     background: #fff;
@@ -453,7 +487,7 @@ nav {
 }
 
 .pi-text {
-    width: 50%;
+    width: 55%;
     font-size: 22px;
 }
 
@@ -600,7 +634,7 @@ h3.person-name {
     }
 }
 /* ====================================== PROSPECTS STYLING (Mitchell) ====================================== */
-
+ 
 .prospects-main {
     flex: 1;
     max-width: 860px;
@@ -609,7 +643,7 @@ h3.person-name {
     padding: 2.5rem 2rem 3.5rem;
     font-family: 'DM Sans', sans-serif;
 }
-
+ 
 .prospects-title {
     font-family: 'DM Sans', sans-serif;
     font-weight: 400;
@@ -621,21 +655,21 @@ h3.person-name {
     transform: translateY(-8px);
     animation: fadeDown 0.6s ease forwards;
 }
-
+ 
 .prospects-title em {
     font-style: italic;
 }
-
+ 
 .prospects-block {
     margin-bottom: 2rem;
     opacity: 0;
     transform: translateY(14px);
 }
-
+ 
 .prospects-block.visible {
     animation: fadeUp 0.55s ease forwards;
 }
-
+ 
 .block-title {
     font-family: 'DM Sans', sans-serif;
     font-weight: 400;
@@ -645,13 +679,13 @@ h3.person-name {
     margin-bottom: -1px;
     padding-left: 1.5rem;
 }
-
+ 
 .block-box {
     border: 2px solid rgba(0, 0, 0, 0.15);
     padding: 1.3rem 1.5rem;
     position: relative;
 }
-
+ 
 .block-dot {
     position: absolute;
     top: -16px;
@@ -661,17 +695,17 @@ h3.person-name {
     border-radius: 50%;
     z-index: 2;
 }
-
+ 
 .dot-grad,
 .dot-nonpitt {
     right: auto;
     left: -16px;
 }
-
+ 
 .dot-grad    { background: #04915F; }
 .dot-pitt    { background: #C1A362; }
 .dot-nonpitt { background: #63058C; }
-
+ 
 .section-body {
     font-family: 'DM Sans', sans-serif;
     font-size: 0.82rem;
@@ -679,49 +713,51 @@ h3.person-name {
     color: #2a2a2a;
     font-weight: 400;
 }
-
+ 
 .section-body strong {
     font-weight: 600;
     color: #111;
 }
-
+ 
 .section-body a {
     color: #04915F;
     text-decoration: underline;
     text-underline-offset: 2px;
     transition: color 0.2s ease;
 }
-
+ 
 .section-body a:hover {
     color: #036644;
 }
-
-/* Pitt block: two-column, no negative margin */
+ 
+/* Pitt block: 2-column × 2-row grid; left on row 1, right on row 2 creates the diagonal */
 .pitt-block {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0;
-    align-items: stretch;
+    grid-template-rows: auto auto;
+    column-gap: 0;
     margin-left: 0;
 }
-
+ 
 .pitt-left {
+    grid-column: 1;
+    grid-row: 1;
     display: flex;
     flex-direction: column;
 }
-
+ 
 .pitt-right {
+    grid-column: 2;
+    grid-row: 2;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    padding-top: 14rem;
 }
-
+ 
 .nour-box {
     width: 100%;
     background: transparent;
 }
-
+ 
 .nour-title {
     font-family: 'DM Sans', sans-serif;
     font-weight: 600;
@@ -729,25 +765,25 @@ h3.person-name {
     color: #111;
     letter-spacing: 0.02em;
 }
-
+ 
 .grad-section .block-box,
 .nonpitt-section .block-box {
     max-width: 520px;
 }
-
+ 
 /* ── Color overrides ── */
 .prospects-block.grad-section .block-title        { color: #63058C; }
 .prospects-block.grad-section .section-body       { color: #63058C; }
 .prospects-block.grad-section .section-body strong { color: #63058C; }
 .prospects-block.grad-section .section-body a      { color: #63058C; }
-
+ 
 .pitt-block .block-title         { color: #04915F; }
 .pitt-block .section-body        { color: #04915F; }
 .pitt-block .section-body strong { color: #04915F; }
 .pitt-block .nour-title          { color: #04915F; }
-
+ 
 /* ====================================== PUBLICATIONS STYLING (Mitchell) ====================================== */
-
+ 
 .page-main {
     flex: 1;
     display: flex;
@@ -757,14 +793,14 @@ h3.person-name {
     background: #04915F;
     font-family: 'DM Sans', sans-serif;
 }
-
+ 
 .publications-wrapper {
     width: 100%;
     max-width: 680px;
     padding: 2rem 2rem 1.5rem;
     position: relative;
 }
-
+ 
 .section-title {
     font-family: 'DM Sans', sans-serif;
     font-style: italic;
@@ -779,13 +815,13 @@ h3.person-name {
     transform: translateY(-10px);
     animation: fadeDown 0.6s ease forwards;
 }
-
+ 
 .publications-list {
     display: flex;
     flex-direction: column;
     gap: 0;
 }
-
+ 
 .pub-card {
     border: 2px solid rgba(255, 255, 255, 0.15);
     padding: 1rem 1.2rem;
@@ -800,19 +836,19 @@ h3.person-name {
     transform: translateY(12px);
     cursor: default;
 }
-
+ 
 .pub-card + .pub-card {
     border-top: none;
 }
-
+ 
 .pub-card:hover {
     background: rgba(255, 255, 255, 0.07);
 }
-
+ 
 .pub-card.visible {
     animation: fadeUp 0.5s ease forwards;
 }
-
+ 
 .pub-text {
     flex: 1;
     font-family: 'DM Sans', sans-serif;
@@ -820,4 +856,37 @@ h3.person-name {
     line-height: 1.6;
     color: #f0ede4;
     font-weight: 300;
+}
+ 
+.pub-text strong {
+    font-weight: 400;
+}
+ 
+.pub-link {
+    align-self: flex-end;
+    flex-shrink: 0;
+    font-family: 'DM Sans', sans-serif;
+    font-style: italic;
+    font-size: 0.76rem;
+    color: #a8e6c8;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    letter-spacing: 0.03em;
+    margin-top: 2px;
+    transition: color 0.2s ease, letter-spacing 0.2s ease;
+    white-space: nowrap;
+}
+ 
+.pub-link:hover {
+    color: #f0ede4;
+    letter-spacing: 0.07em;
+}
+ 
+/* ── Animations ── */
+@keyframes fadeDown {
+    to { opacity: 1; transform: translateY(0); }
+}
+ 
+@keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
 }
