@@ -16,6 +16,9 @@ async function setup() {
   // Once all sections are rendered, setup the arced names
   applyArcNames();
 
+  // Setup Know More toggles for bios
+  setupPersonToggles();
+
   // Staggered fade-in for headings and student cards
   const headings = document.querySelectorAll('#people-title, .people-headings');
   const cards = document.querySelectorAll('.student');
@@ -85,22 +88,25 @@ function renderStudents(students, containerId) {
       imgHTML = `<img class="headshots" src="${student.image}" alt="${student.name}">`;
     }
 
-    // sets the students bio
-    const bioHTML = student.bio
-      ? `<p>${student.bio}</p>`
-      : '';
-
-    // sets the students linkedin 
+    // Sets the linkedin link if available
     const linkedinHTML = student.linkedin
       ? `<a class="linkedin-link" href="${student.linkedin}" target="_blank">LinkedIn ↗</a>`
       : '';
+
+    // Sets the bio + linkedin inside a toggleable content block if bio exists
+    const bioHTML = student.bio
+      ? `<div class="person-card-content" hidden>
+           <p>${student.bio}</p>
+           ${linkedinHTML}
+         </div>
+         <button class="person-card-toggle" aria-expanded="false">Know More</button>`
+      : linkedinHTML;
 
     // sets the inner html for the div 
     div.innerHTML = `
       <h3 class="person-name">${student.name}</h3>
       ${imgHTML}
       ${bioHTML}
-      ${linkedinHTML}
     `;
 
     // Adds the div to the end of the container 
@@ -130,6 +136,24 @@ function renderAlumni(alumni, containerId) {
 
     // Adds the div to the end of the container 
     container.appendChild(div);
+  });
+}
+
+// Used to setup Know More toggles for bios on each person card
+function setupPersonToggles() {
+  const cards = Array.from(document.querySelectorAll('.student'));
+
+  cards.forEach(card => {
+    const toggle = card.querySelector('.person-card-toggle');
+    const content = card.querySelector('.person-card-content');
+    if (!toggle || !content) return;
+
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      content.hidden = expanded;
+      toggle.textContent = expanded ? 'Know More' : 'Show Less';
+    });
   });
 }
 
