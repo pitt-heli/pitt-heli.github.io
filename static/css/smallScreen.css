@@ -45,7 +45,8 @@ nav {
     align-items: center;
     text-align: center;
     font-size: 12px;
-    line-height: .25;
+    line-height: 0;
+    margin-bottom: 25px;
 
     img {
         margin: 30px 0 25px 0;
@@ -301,6 +302,7 @@ nav {
 .heli-logo {
     height: 67.5px;
     width: 67.5px;
+    margin: 10px 0 10px 0;
 }
 
 #homepage-main {
@@ -393,8 +395,10 @@ nav {
     color: #04915F;
     font-weight: normal;
     margin-left: 5%;
+    letter-spacing: 4px;
+
     h1{
-        font-size: 14px;
+        font-size: 22px;
 
     }
 }
@@ -609,6 +613,19 @@ h3.person-name {
     margin-top: 50px;
 }
 
+#back-to-top {
+    position: fixed;
+    transform: s;
+    right: 30px;
+    top: 45%;
+    float: right;
+    scroll-behavior: smooth;
+
+    img {
+        height: auto;
+        width: 26px;
+    }
+}
 /* ====================================== PROSPECTS STYLING (Mitchell) ====================================== */
  
 .prospects-main {
