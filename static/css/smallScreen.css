@@ -2,7 +2,9 @@
 
 body {
     font-family: 'DM Sans', sans-serif;
-    overflow-x:hidden;
+    font-weight: 400;
+    /* Regular weight */
+    font-style: normal;    overflow-x:hidden;
 }
 
 nav {
@@ -47,7 +49,13 @@ nav {
     font-size: 12px;
     line-height: 0;
     margin-bottom: 25px;
-
+    p {
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 400;
+        /* Regular weight */
+        font-style: normal;
+        margin-top: 0.1px;
+    }
     img {
         margin: 30px 0 25px 0;
         width: 110px;
@@ -411,6 +419,12 @@ nav {
     font-weight: bold;
 }
 
+#home-title .regular {
+        font-weight: 400;
+        /* Regular weight */
+        font-style: normal;
+}
+
 #home-title .italic {
     font-style: italic;
     font-weight: lighter;
@@ -502,10 +516,29 @@ nav {
     margin-right: 10%;
 }
 .person-card-toggle {
-    display: block;
-    margin-top: 12px;
-    cursor: pointer;
-    width: 80%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0 4px;
+  vertical-align: middle;
+}
+
+.toggle-arrow {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+.headshot-wrap {
+  position: relative;
+}
+
+.headshot-wrap .person-card-toggle {
+  position: absolute;
+  top: -20px;       /* adjust to align vertically with the arc text */
+  left: 140px;     /* adjust to sit just after the name ends */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
 }
 #alumni-container {
     display: flex;

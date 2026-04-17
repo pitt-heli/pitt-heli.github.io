@@ -16,7 +16,7 @@ async function setup() {
   // Once all sections are rendered, setup the arced names
   applyArcNames();
 
-  // Setup Know More toggles for bios
+  // Setup dropdown arrow toggles for bios
   setupPersonToggles();
 
   // Staggered fade-in for headings and student cards
@@ -93,20 +93,14 @@ function renderStudents(students, containerId) {
       ? `<a class="linkedin-link" href="${student.linkedin}" target="_blank">LinkedIn ↗</a>`
       : '';
 
-    // Sets the bio + linkedin inside a toggleable content block if bio exists
-    const bioHTML = student.bio
-      ? `<div class="person-card-content" hidden>
-           <p>${student.bio}</p>
-           ${linkedinHTML}
-         </div>
-         <button class="person-card-toggle" aria-expanded="false">Know More</button>`
-      : linkedinHTML;
-
-    // sets the inner html for the div 
+    // Sets the div's innerHTML with the arrow button directly after the name
     div.innerHTML = `
-      <h3 class="person-name">${student.name}</h3>
+      <div class="person-name-row">
+        <h3 class="person-name">${student.name}</h3>
+        ${student.bio ? `<button class="person-card-toggle" aria-expanded="false"><span class="toggle-arrow">▼</span></button>` : ''}
+      </div>
       ${imgHTML}
-      ${bioHTML}
+      ${student.bio ? `<div class="person-card-content" hidden><p>${student.bio}</p>${linkedinHTML}</div>` : linkedinHTML}
     `;
 
     // Adds the div to the end of the container 
@@ -139,7 +133,7 @@ function renderAlumni(alumni, containerId) {
   });
 }
 
-// Used to setup Know More toggles for bios on each person card
+// Used to setup dropdown arrow toggles for bios on each person card
 function setupPersonToggles() {
   const cards = Array.from(document.querySelectorAll('.student'));
 
@@ -152,7 +146,7 @@ function setupPersonToggles() {
       const expanded = toggle.getAttribute('aria-expanded') === 'true';
       toggle.setAttribute('aria-expanded', String(!expanded));
       content.hidden = expanded;
-      toggle.textContent = expanded ? 'Know More' : 'Show Less';
+      toggle.querySelector('.toggle-arrow').style.transform = expanded ? '' : 'rotate(180deg)';
     });
   });
 }
@@ -193,7 +187,11 @@ function applyArcNames() {
       : card.querySelector('.headshots-tan, .headshots-purple');
 
     if (!imgEl) return;
-    const name = h3.textContent.trim();
+
+    // Use only the text content of the name, excluding the button text
+    const nameNode = [...h3.childNodes].find(n => n.nodeType === Node.TEXT_NODE);
+    const name = nameNode ? nameNode.textContent.trim() : h3.textContent.trim();
+
     const size = REFERENCE_SIZE;
     const cx = size / 2;
     const cy = size / 2;
@@ -215,5 +213,11 @@ function applyArcNames() {
       </text>`;
 
     wrap.appendChild(svg);
+
+    // If this card has a toggle button, move it inside the wrap so it sits alongside the arc name
+    const toggle = card.querySelector('.person-card-toggle');
+    if (toggle) {
+      wrap.appendChild(toggle);
+    }
   });
 }
