@@ -19,34 +19,16 @@
 
   "undergraduate_students": [
     {
-      "name": "David Neumann",
-      "image": "./static/images/headshots/David Neumann.png",
-      "bio": "David is a third-year, non-traditional student at the University of Pittsburgh double-majoring in Statistics and Data Science. Drawing on a diverse background with wide-ranging professional experience, his academic interests center on leveraging his technical skills in ways that serve the public interest. David plans to pursue graduate school, where he intends to specialize in advanced statistical modeling to ensure emerging technologies remain safe, transparent, and aligned with the public good.",
-      "linkedin": "https://www.linkedin.com/in/david-neumann/"
-    },
-    {
       "name": "Eliza Callahan",
       "image": "./static/images/headshots/Eliza Callahan.png",
       "bio": "Eliza is a fourth-year student at the University of Pittsburgh studying Computational Biology and French. She is also pursuing a learning sciences distinction and is passionate about technology as a means to improve learning and educational opportunities. Eliza is on the Pitt rowing team and spends much of her free time rowing on the Allegheny River.",
       "linkedin": "https://www.linkedin.com/in/eliza-callahan-25a08035a/"
     },
     {
-      "name": "Keira Tubbs",
-      "image": "./static/images/headshots/Keira Tubbs.png",
-      "bio": "Keira is a second-year student at the University of Pittsburgh majoring in mathematical biology and minoring in statistics. She is passionate about doing data analysis and using psychology to improve learning among students. In her free time, Keira enjoys running with her friends.",
-      "linkedin": "https://www.linkedin.com/in/keira-tubbs-24005635b/"
-    },
-    {
       "name": "Kendra Go",
       "image": "./static/images/headshots/Kendra Go.png",
       "bio": "Kendra is a second-year student at the University of Pittsburgh studying Information Science and Digital Narrative & Interactive Design, along with a certificate in Digital Media. She is passionate about design and the ways in which technology can both improve and become more accessible. Outside of academics, she enjoys completing crosswords, baking, and discovering new media to watch and listen to.",
       "linkedin": "https://www.linkedin.com/in/kendrago/"
-    },
-    {
-      "name": "Nishika Sundara",
-      "image": "./static/images/headshots/Nishika Sundara.png",
-      "bio": "Nishika is a first-year student at the University of Pittsburgh studying Psychology with a Business minor. She is also pursuing a certificate in Conceptual Foundations in Medicine as she is interested in how to improve human behavior in a clinical setting. Nishika is quite fascinated by music and is currently learning how to play the ukulele in her free time.",
-      "linkedin": null
     },
     {
       "name": "Theresa Vazapphilly",
@@ -61,26 +43,40 @@
       "linkedin": "https://www.linkedin.com/in/yifei-tian-cs/"
     },
     {
-      "name": "Andrew Boria",
-      "image": "./static/images/logos/purple-heli.png",
-      "imageWrapper": "headshots-tan",
-      "bio": null,
-      "linkedin": ""
-    },
-    {
       "name": "Ella Negley",
       "image": "./static/images/logos/green-heli.png",
       "imageWrapper": "headshots-purple",
+      "bio": "Ella is a sophomore at Elon University, where she is majoring in Statistics and Data Analytics with a concentration in actuarial science. She is an incoming Learning Sciences REU student at the Learning Research and Development Center (LRDC). Her interests include curriculum design and critical thinking, driven by a passion for fostering internal motivation in students. Outside the classroom, she serves in student government, works as a Peer Success Coach, and enjoys bullet journaling.",
+      "linkedin": ""
+    },
+    {
+      "name": "John Onubogu",
+      "image": "./static/images/headshots/John Onubugu.png",
+      "bio": "John is a sophomore at the University of Pittsburgh studying Computer Science and Data Science. In his free time, he loves to read books, particularly fantasy novels. John is also an avid chess player and a member of the Pitt Computer Science Club.",
+      "linkedin": "https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fjohn-onubogu%2F&data=05%7C02%7Cr.coelho%40pitt.edu%7C7208e6b041eb4ba2d3b208de85c35661%7C9ef9f489e0a04eeb87cc3a526112fd0d%7C1%7C0%7C639095271244885457%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=g9DVyR6iRQ4FPbBb609EiQURW0jp0kjyJ7yrEkYaxlU%3D&reserved=0"
+    },
+    {
+      "name": "Finn Fitzgerald",
+      "image": "static/images/headshots/Finn Fitzgeral.png",
+      "bio": "Finn is a sophomore at the University of Pittsburgh studying Physics and Quantum Computing and Computer Science with a secondary field of study in performing arts. He is passionate about AI security, quantum computing, and raising awareness of burgeoning technologies. Finn is the principal violist of the Pitt Symphonic Orchestra, and president of the Unifuristy club. ",
+      "linkedin": "https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.linkedin.com%2Fin%2Ffinn-fitzgerald-621-&data=05%7C02%7Cr.coelho%40pitt.edu%7C944c017c82874410c9f008de9c177a97%7C9ef9f489e0a04eeb87cc3a526112fd0d%7C1%7C0%7C639119821811341680%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=T%2BZMnDgjgmvv5pRyXZXV%2F7N7F3%2FkdFmKfFzaWmt3GCo%3D&reserved=0"
+    },
+    {
+      "name": "Elese Zukina",
+      "image": "static/images/headshots/Elese Zukina.jpg",
+      "bio": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Andrew Boria",
+      "image": "./static/images/logos/purple-heli.png",
+      "imageWrapper": "headshots-tan",
       "bio": null,
       "linkedin": ""
     }
   ],
 
   "alumni_students": [
-    {
-      "name": "John Onubogu",
-      "image": "./static/images/headshots/John Onubugu.png"
-    },
     {
       "name": "Yashavi Chantali",
       "image": "./static/images/headshots/Yash Chintala.png"
@@ -94,7 +90,25 @@
         "image": "./static/images/headshots/Cassandra Kelley.png"
     },
     {
-      "name": "Raja",
+      "name": "Nishika Sundara",
+      "image": "./static/images/headshots/Nishika Sundara.png",
+      "bio": "Nishika is a first-year student at the University of Pittsburgh studying Psychology with a Business minor. She is also pursuing a certificate in Conceptual Foundations in Medicine as she is interested in how to improve human behavior in a clinical setting. Nishika is quite fascinated by music and is currently learning how to play the ukulele in her free time.",
+      "linkedin": null
+    },
+    {
+      "name": "David Neumann",
+      "image": "./static/images/headshots/David Neumann.png",
+      "bio": "David is a third-year, non-traditional student at the University of Pittsburgh double-majoring in Statistics and Data Science. Drawing on a diverse background with wide-ranging professional experience, his academic interests center on leveraging his technical skills in ways that serve the public interest. David plans to pursue graduate school, where he intends to specialize in advanced statistical modeling to ensure emerging technologies remain safe, transparent, and aligned with the public good.",
+      "linkedin": "https://www.linkedin.com/in/david-neumann/"
+    },
+    {
+      "name": "Keira Tubbs",
+      "image": "./static/images/headshots/Keira Tubbs.png",
+      "bio": "Keira is a second-year student at the University of Pittsburgh majoring in mathematical biology and minoring in statistics. She is passionate about doing data analysis and using psychology to improve learning among students. In her free time, Keira enjoys running with her friends.",
+      "linkedin": "https://www.linkedin.com/in/keira-tubbs-24005635b/"
+    },
+    {
+      "name": "Raja Krishnaswamy",
       "image": "./static/images/headshots/Raja.png",
       "bio": "Raja (RJ) is a second-year PhD student at the University of Pittsburgh Department of Computer Science. He is passionate about using technology to improve outcomes education, as well as making quantum computing accessible to as many people as possible. RJ is an avid reader and spends much of his time reading fantasy, sci-fi, math books, and even history.",
       "linkedin": "https://www.linkedin.com/in/raja-krishnaswamy-361a5a190/"
