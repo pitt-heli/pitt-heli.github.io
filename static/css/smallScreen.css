@@ -24,7 +24,7 @@ nav {
         li {
             display: inline-block;
             list-style: none;
-            margin: 10px 4px;
+            margin: 10px 2px;
 
             a {
                 text-decoration: none;
@@ -375,7 +375,7 @@ nav {
     border: 1.5px solid black;
     border-radius: 4px;
     background: #fff;
-    font-size: 11px;
+    font-size: 10px;
     line-height: 1.6;
     box-sizing: border-box;
     pointer-events: none;
@@ -385,15 +385,15 @@ nav {
 
 #purple-heli-homepage {
     display: inline-block;
-    height: 45px;
-    width: 45px;
+    height: 25px;
+    width: 25px;
     margin-right: 5px;
 }
 
 #yellow-heli-homepage {
     display: inline-block;
-    height: 65px;
-    width: 65px;
+    height: 45px;
+    width: 45px;
     margin-left: 5px;
     margin-top: 30px;
 }
@@ -447,14 +447,17 @@ nav {
 /* ====================================== PEOPLE STYLING ====================================== */
 
 #people-title {
-    padding-left: 5%;
+    padding-left: 1%;
     color: #63058C;
+    font-weight: 600; /* 600 represents Semibold */
+    font-size: 32px;
 }
 
 .people-headings {
     color: #04915F;
-    margin: 50px 0px 50px 10%;
-    padding-bottom: 20px
+    margin: 50px 0px 50px 2.5%;
+    padding-bottom: 20px;
+    font-size: 22px;
 }
 #people-title,
 .people-headings {
@@ -508,7 +511,7 @@ nav {
 #undergrad-students-container {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 50px;
+    column-gap: 35px;
     row-gap: 50px; 
     justify-content: center;
 }
@@ -667,11 +670,9 @@ h3.person-name {
 }
 .people-back-to-top {
     position:fixed;
-    right: clamp(25px, 1vw, 24px);
+    right: 0px;
     top: 28%;
     display: inline-flex;
-    align-items: center;
-    justify-content: center;
     width: 34px;
     height: 34px;
 }
