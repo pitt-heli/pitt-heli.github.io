@@ -24,7 +24,7 @@ nav {
         li {
             display: inline-block;
             list-style: none;
-            margin: 10px 15px;
+            margin: 10px 4px;
 
             a {
                 text-decoration: none;
@@ -46,7 +46,7 @@ nav {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    font-size: 12px;
+    font-size: 8px;
     line-height: 0;
     margin-bottom: 25px;
     p {
@@ -58,8 +58,8 @@ nav {
     }
     img {
         margin: 30px 0 25px 0;
-        width: 110px;
-        height: 110px;
+        width: 90px;
+        height: 90px;
     }
 
     a {
@@ -312,8 +312,8 @@ nav {
 /* ====================================== HOMEPAGE STYLING ====================================== */
 
 .heli-logo {
-    height: 67.5px;
-    width: 67.5px;
+    height: 57.5px;
+    width: 57.5px;
     margin: 10px 0 10px 0;
 }
 
@@ -369,13 +369,13 @@ nav {
     justify-content: center;
     align-items: center;
     font-family: inherit;
-    width: 400px;
-    padding: 30px;
+    width: 300px;
+    padding: 10px;
     height: 300px;
     border: 1.5px solid black;
     border-radius: 4px;
     background: #fff;
-    font-size: 12px;
+    font-size: 11px;
     line-height: 1.6;
     box-sizing: border-box;
     pointer-events: none;
@@ -385,32 +385,34 @@ nav {
 
 #purple-heli-homepage {
     display: inline-block;
-    height: 55px;
-    width: 55px;
+    height: 45px;
+    width: 45px;
+    margin-right: 5px;
 }
 
 #yellow-heli-homepage {
     display: inline-block;
-    height: 75px;
-    width: 75px;
+    height: 65px;
+    width: 65px;
+    margin-left: 5px;
+    margin-top: 30px;
 }
 
 #green-star-homepage {
-        justify-content: center;
     align-items: center;
-    width: 75px;
-    height: 75px;
+    width: 65px;
+    height: 65px;
 }
 
 #home-title {
     width: 100%;
     color: #04915F;
     font-weight: normal;
-    margin-left: 5%;
+    margin-left: 2%;
     letter-spacing: 4px;
 
     h1{
-        font-size: 22px;
+        font-size: 18px;
 
     }
 }
@@ -445,7 +447,7 @@ nav {
 /* ====================================== PEOPLE STYLING ====================================== */
 
 #people-title {
-    padding-left: 10%;
+    padding-left: 5%;
     color: #63058C;
 }
 
@@ -466,13 +468,10 @@ nav {
 }
 
 /* --- Principal Investigator --- */
-#raquel-section {
-    margin-left: 10%;
-}
 
 #raquel-section .student {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     gap: 40px;
     width: 100%;
@@ -494,7 +493,7 @@ nav {
 }
 
 .pi-text {
-    width: 41%;
+    width: 85%;
     font-size: 15px;
 }
 
@@ -502,18 +501,16 @@ nav {
 #phd-students-container {
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
     gap: 40px;
-    margin-left: 10%;
+    justify-content: center;
 }
 
 #undergrad-students-container {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 100px;
+    column-gap: 50px;
     row-gap: 50px; 
-    margin-left: 10%;
-    margin-right: 10%;
+    justify-content: center;
 }
 .person-card-toggle {
   background: none;
@@ -644,7 +641,7 @@ h3.person-name {
 
 #alumni-container .student {
     flex: 0 0 auto;
-    width: auto;
+    width: 35%;
 }
 
 .student:nth-child(odd) {
@@ -670,7 +667,7 @@ h3.person-name {
 }
 .people-back-to-top {
     position:fixed;
-    right: clamp(11px, 1vw, 24px);
+    right: clamp(25px, 1vw, 24px);
     top: 28%;
     display: inline-flex;
     align-items: center;
