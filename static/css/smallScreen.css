@@ -402,15 +402,14 @@ body {
 
 #homepage-main {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
 }
 
 #homepage-leftOfBox {
     /* padding-left: 10%; */
-    display: inline-block;
-    align-content: end;
-    margin: 340px auto 100px auto;
+    margin: 20px 0 0 20px;
+    order: 2;
 }
 
 #homepage-box {
@@ -421,20 +420,19 @@ body {
 }
 
 #homepage-rightOfBox {
-    display: inline-block;
-    margin: 400px auto 0 auto;
+    margin: 0 5px 20px auto;
+    order: 3;
 }
 #homepage-belowBox {
-    display: flex;
-    justify-content:center;
-    margin: -70px 65% 0 0;
+        margin: -100px auto 0 107px;
+        justify-content: center;
 }
 #green-box {
     position: absolute;
-    bottom: 100px;
-    right: -45px;
-    width: 80px;
-    height: 80px;
+    bottom: -25px;
+    right: -5px;
+    width: 50px;
+    height: 50px;
     background-color: #2e7d5e;
     border-radius: 50%;
     display: flex;
@@ -443,8 +441,8 @@ body {
 }
 
 .white-heli-logo {
-    width: 48px;
-    height: 48px;
+    width: 30px;
+    height: 30px;
 }
 
 #hompage-box-textbox {
@@ -452,13 +450,13 @@ body {
     justify-content: center;
     align-items: center;
     font-family: inherit;
-    width: 300px;
+    width: 360px;
     padding: 10px;
     height: 300px;
     border: 1.5px solid black;
     border-radius: 4px;
     background: #fff;
-    font-size: 10px;
+    font-size: 12px;
     line-height: 1.6;
     box-sizing: border-box;
     pointer-events: none;
