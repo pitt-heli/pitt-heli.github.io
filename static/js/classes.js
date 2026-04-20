@@ -7,6 +7,7 @@ async function setupClasses() {
   renderClasses(classes, "classes-grid");
   setupClassesAnimations();
   document.body.style.visibility = "visible";
+  setupNavToggle(); 
 }
 
 function renderClasses(classes, containerId) {
@@ -27,7 +28,24 @@ function renderClasses(classes, containerId) {
     container.appendChild(article);
   });
 }
+// Used to setup the mobile hamburger nav toggle
+function setupNavToggle() {
+  const toggle = document.getElementById('navToggle');
+  const overlay = document.getElementById('navOverlay');
+  const close = document.getElementById('navClose');
 
+  if (!toggle || !overlay || !close) return;
+
+  toggle.addEventListener('click', () => {
+    overlay.classList.add('open');
+    toggle.style.display = 'none';        // hide hamburger when overlay opens
+  });
+
+  close.addEventListener('click', () => {
+    overlay.classList.remove('open');
+    toggle.style.display = 'block';       // restore hamburger when overlay closes
+  });
+}
 function setupClassesAnimations() {
   const elements = document.querySelectorAll(
     ".classes-page .classes-hero h1, .classes-page .class-card, .classes-page .classes-back-to-top"
