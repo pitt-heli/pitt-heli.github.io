@@ -695,65 +695,104 @@ h3.person-name {
     width: 26px;
     height: auto;
 }
+
 /* ====================================== PROSPECTS STYLING (Mitchell) ====================================== */
- 
+
 .prospects-main {
     flex: 1;
-    max-width: 860px;
     width: 100%;
-    margin: 0 auto;
-    padding: 2.5rem 2rem 3.5rem;
+    padding: 2.5rem 0 3.5rem;
     font-family: 'DM Sans', sans-serif;
 }
- 
+
+/* ── Page title ── */
 .prospects-title {
     font-family: 'DM Sans', sans-serif;
     font-weight: 400;
-    font-size: 1.8rem;
+    font-size: 40px;
     letter-spacing: 0.1em;
     color: #04915F;
-    margin-bottom: 2rem;
+    padding-left: 10%;
+    margin-bottom: 4rem;
+    text-align: left;
     opacity: 0;
     transform: translateY(-8px);
     animation: fadeDown 0.6s ease forwards;
 }
- 
+
 .prospects-title em {
     font-style: italic;
 }
- 
+
+.prospects-title .lab-text {
+    font-weight: 600;
+}
+
+/* ── Block: wraps title + bordered box ── */
 .prospects-block {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2rem;
     opacity: 0;
     transform: translateY(14px);
 }
- 
+
 .prospects-block.visible {
     animation: fadeUp 0.55s ease forwards;
 }
- 
+
+/* Match grad/non-Pitt block widths to Pitt block */
+.prospects-block.grad-section,
+.prospects-block.nonpitt-section {
+    max-width: 80vw;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ── Block title: sits just above the border ── */
 .block-title {
     font-family: 'DM Sans', sans-serif;
-    font-weight: 400;
-    font-size: 1.1rem;
+    font-weight: 600;
+    font-size: auto;
     letter-spacing: 0.04em;
     color: #1a1a1a;
-    margin-bottom: -1px;
+    margin-bottom: -5px;
     padding-left: 1.5rem;
 }
- 
+
+/* Grad/non-Pitt titles: nudged right to match box position */
+.prospects-block.grad-section .block-title,
+.prospects-block.nonpitt-section .block-title {
+    padding-left: 26%;
+}
+
+/* ── Bordered box ── */
 .block-box {
     border: 2px solid rgba(0, 0, 0, 0.15);
-    padding: 1.3rem 1.5rem;
+    padding: 1.6rem 1.8rem;
     position: relative;
+    max-width: 50%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    overflow: visible;
 }
- 
+
+/* Grad/non-Pitt boxes: nudged right from the block's left edge */
+.prospects-block.grad-section .block-box,
+.prospects-block.nonpitt-section .block-box {
+    margin-left: 20%;
+    margin-right: auto;
+}
+
+/* ── Dot: 96px (scaled down from 120) ── */
 .block-dot {
     position: absolute;
-    top: -24px;
-    right: -24px;
-    width: 48px;
-    height: 48px;
+    top: -45px;
+    right: -45px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     z-index: 2;
 }
@@ -761,88 +800,142 @@ h3.person-name {
 .dot-grad,
 .dot-nonpitt {
     right: auto;
-    left: -24px;
+    left: -45px;
 }
- 
+
 .dot-grad    { background: #04915F; }
 .dot-pitt    { background: #C1A362; }
 .dot-nonpitt { background: #63058C; }
- 
+
+/* ── Body text ── */
 .section-body {
     font-family: 'DM Sans', sans-serif;
-    font-size: 0.82rem;
+    font-size: auto;
     line-height: 1.75;
     color: #2a2a2a;
     font-weight: 400;
 }
- 
+
 .section-body strong {
-    font-weight: 600;
+    font-weight: 700;
     color: #111;
 }
- 
+
 .section-body a {
     color: #04915F;
     text-decoration: underline;
     text-underline-offset: 2px;
     transition: color 0.2s ease;
 }
- 
+
 .section-body a:hover {
     color: #036644;
 }
- 
-/* Pitt block: 2-column × 2-row grid; left on row 1, right on row 2 creates the diagonal */
+
+/* ── Pitt block: diagonal two-column layout, 80vw total ── */
+.prospects-block.pitt-block {
+    max-width: 80vw;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .pitt-block {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
+    grid-auto-rows: 1fr;
     column-gap: 0;
-    margin-left: 0;
+    align-items: stretch;
+    width: 100%;
 }
- 
+
 .pitt-left {
     grid-column: 1;
     grid-row: 1;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
 }
- 
+
+.pitt-left .block-title {
+    padding-left: 1.5rem;
+    margin-bottom: -1px;
+    align-self: flex-start;
+}
+
 .pitt-right {
     grid-column: 2;
     grid-row: 2;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
 }
- 
-.nour-box {
+
+.pitt-block .block-box {
+    border-color: #04915F;
     width: 100%;
+    max-width: none;
+    margin: 0;
+}
+
+.nour-box {
     background: transparent;
 }
- 
+
 .nour-title {
     font-family: 'DM Sans', sans-serif;
-    font-weight: 600;
-    font-size: 0.84rem;
+    font-weight: 700;
+    font-size: 1rem;
     color: #111;
     letter-spacing: 0.02em;
+    margin: 0 0 0 0;
 }
- 
-.grad-section .block-box,
-.nonpitt-section .block-box {
-    max-width: 520px;
+
+.nour-box .section-body {
+    margin-top: 0;
 }
- 
-/* ── Color overrides ── */
-.prospects-block.grad-section .block-title        { color: #63058C; }
-.prospects-block.grad-section .section-body       { color: #63058C; }
+
+/* ── Colored borders matching each section's text color ── */
+.prospects-block.grad-section .block-box    { border-color: #63058C; }
+.prospects-block.nonpitt-section .block-box { border-color: #63058C; }
+
+/* ── Graduate section — purple title and text ── */
+.prospects-block.grad-section .block-title         { color: #63058C; }
+.prospects-block.grad-section .section-body        { color: #63058C; }
 .prospects-block.grad-section .section-body strong { color: #63058C; }
 .prospects-block.grad-section .section-body a      { color: #63058C; }
- 
+
+/* ── Pitt undergrad section — green title and text ── */
 .pitt-block .block-title         { color: #04915F; }
 .pitt-block .section-body        { color: #04915F; }
 .pitt-block .section-body strong { color: #04915F; }
 .pitt-block .nour-title          { color: #04915F; }
+
+/* ── non-Pitt undergrad section — black title and text ── */
+.prospects-block.nonpitt-section .block-box          { border-color: #111; }
+.prospects-block.nonpitt-section .block-title        { color: #111; }
+.prospects-block.nonpitt-section .section-body       { color: #111; }
+.prospects-block.nonpitt-section .section-body strong { color: #111; }
+.prospects-block.nonpitt-section .section-body a     { color: #111; }
+
+/* ── Back-to-top arrow ── */
+.prospects-back-to-top {
+    position: fixed;
+    right: clamp(11px, 1vw, 24px);
+    bottom: 15%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    z-index: 10;
+}
+
+.prospects-back-to-top img {
+    width: 24px;
+    height: auto;
+}
  
 /* ====================================== PUBLICATIONS STYLING (Mitchell) ====================================== */
 
@@ -867,7 +960,7 @@ h3.person-name {
     color: #f0ede4;
     text-align: left;
     text-transform: uppercase;
-    padding-left: 15%;
+    padding-left: 16%;
     margin-bottom: 1.2rem;
     opacity: 0;
     transform: translateY(-10px);
@@ -878,8 +971,9 @@ h3.person-name {
     display: flex;
     flex-direction: column;
     gap: 0;
-    max-width: 65%;
-    margin: 0 auto;
+    width: 65%;
+    margin-left: 10%;
+    margin-right: auto;
     padding: 0 0.8rem;
     box-sizing: border-box;
 }
@@ -914,7 +1008,7 @@ h3.person-name {
 .pub-text {
     flex: 1;
     font-family: 'DM Sans', sans-serif;
-    font-size: 0.78rem;
+    font-size: auto;
     line-height: 1.55;
     color: #f0ede4;
     font-weight: 400;
@@ -929,7 +1023,7 @@ h3.person-name {
     flex-shrink: 0;
     font-family: 'DM Sans', sans-serif;
     font-style: normal;
-    font-size: 0.74rem;
+    font-size: auto;
     color: #a8e6c8;
     text-decoration: underline;
     text-underline-offset: 2px;
@@ -946,8 +1040,8 @@ h3.person-name {
 
 .publications-back-to-top {
     position: fixed;
-    right: 12px;
-    bottom: 12%;
+    right: clamp(22px, 4vw, 48px);
+    bottom: 15%;
     display: inline-flex;
     align-items: center;
     justify-content: center;

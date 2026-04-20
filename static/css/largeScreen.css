@@ -714,7 +714,7 @@ h3.person-name {
     letter-spacing: 0.1em;
     color: #04915F;
     padding-left: 10%;
-    margin-bottom: 2.5rem;
+    margin-bottom: 5rem;
     text-align: left;
     opacity: 0;
     transform: translateY(-8px);
@@ -731,7 +731,7 @@ h3.person-name {
 
 /* ── Block: wraps title + bordered box ── */
 .prospects-block {
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
     margin-left: auto;
     margin-right: auto;
     padding: 0 2rem;
@@ -743,6 +743,15 @@ h3.person-name {
     animation: fadeUp 0.55s ease forwards;
 }
 
+/* Match grad/non-Pitt block widths to Pitt block */
+.prospects-block.grad-section,
+.prospects-block.nonpitt-section {
+    max-width: 80vw;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* ── Block title: sits just above the border ── */
 .block-title {
     font-family: 'DM Sans', sans-serif;
@@ -750,33 +759,41 @@ h3.person-name {
     font-size: auto;
     letter-spacing: 0.04em;
     color: #1a1a1a;
-    margin-bottom: -1px;
+    margin-bottom: -5px;
     padding-left: 2rem;
 }
 
+/* Grad/non-Pitt titles: nudged right to match box position */
 .prospects-block.grad-section .block-title,
 .prospects-block.nonpitt-section .block-title {
-    padding-left: 10rem;   /* was 2rem — clears the 60px dot */
+    padding-left: 26%;
 }
 
-/* ── Bordered box: ── */
+/* ── Bordered box ── */
 .block-box {
     border: 2px solid rgba(0, 0, 0, 0.15);
     padding: 2rem 2.2rem;
     position: relative;
-    max-width: 39%;
+    max-width: 50%;
     box-sizing: border-box;
     margin: 0 auto;
     overflow: visible;
 }
 
+/* Grad/non-Pitt boxes: nudged right from the block's left edge */
+.prospects-block.grad-section .block-box,
+.prospects-block.nonpitt-section .block-box {
+    margin-left: 20%;
+    margin-right: auto;
+}
+
 /* ── Dot: absolutely positioned at top corner of .block-box ── */
 .block-dot {
     position: absolute;
-    top: -30px;
-    right: -30px;
-    width: 60px;
-    height: 60px;
+    top: -60px;
+    right: -60px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     z-index: 2;
 }
@@ -784,7 +801,7 @@ h3.person-name {
 .dot-grad,
 .dot-nonpitt {
     right: auto;
-    left: -30px;
+    left: -60px;
 }
 
 .dot-grad    { background: #04915F; }
@@ -816,9 +833,12 @@ h3.person-name {
     color: #036644;
 }
 
-/* ── Pitt block: diagonal two-column layout with smaller boxes ── */
+/* ── Pitt block: diagonal two-column layout, 80vw total ── */
 .prospects-block.pitt-block {
-    max-width: none;   /* let the block span full viewport so columns hit 50vw */
+    max-width: 80vw;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .pitt-block {
@@ -835,8 +855,15 @@ h3.person-name {
     grid-column: 1;
     grid-row: 1;
     display: flex;
-    justify-content: flex-end;   /* push box to the right edge of column 1 */
-    padding-right: 30px;         /* offset so dot lands at 50vw exactly */
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Pitt title sits above the left box */
+.pitt-left .block-title {
+    padding-left: 2rem;
+    margin-bottom: -1px;
+    align-self: flex-start;
 }
 
 .pitt-right {
@@ -844,13 +871,12 @@ h3.person-name {
     grid-row: 2;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;   /* push box to the left edge of column 2 */
-    padding-left: 30px;            /* mirror offset for visual balance */
+    justify-content: flex-start;
 }
 
 .pitt-block .block-box {
     border-color: #04915F;
-    width: 39%;
+    width: 100%;
     max-width: none;
     margin: 0;
 }
@@ -869,7 +895,7 @@ h3.person-name {
 }
 
 .nour-box .section-body {
-    margin-top: 0;      /* reset default p top margin */
+    margin-top: 0;
 }
 
 /* ── Colored borders matching each section's text color ── */
@@ -935,7 +961,7 @@ h3.person-name {
     color: #f0ede4;
     text-align: left;
     text-transform: uppercase;
-    padding-left: 15%;
+    padding-left: 16%;
     margin-bottom: 2rem;
     opacity: 0;
     transform: translateY(-10px);
@@ -946,8 +972,9 @@ h3.person-name {
     display: flex;
     flex-direction: column;
     gap: 0;
-    max-width: 65%;
-    margin: 0 auto;
+    width: 65%;
+    margin-left: 10%;
+    margin-right: auto;
     padding: 0 2rem;
 }
 
@@ -981,7 +1008,7 @@ h3.person-name {
 .pub-text {
     flex: 1;
     font-family: 'DM Sans', sans-serif;
-    font-size: 0.82rem;
+    font-size: auto;
     line-height: 1.6;
     color: #f0ede4;
     font-weight: 400;
@@ -996,7 +1023,7 @@ h3.person-name {
     flex-shrink: 0;
     font-family: 'DM Sans', sans-serif;
     font-style: normal;
-    font-size: 0.78rem;
+    font-size: auto;
     color: #a8e6c8;
     text-decoration: underline;
     text-underline-offset: 2px;
