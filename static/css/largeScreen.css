@@ -279,6 +279,7 @@ nav {
     flex-wrap: wrap;
     align-items: flex-start;
     row-gap: 40px;
+    column-gap: 60px;
     margin-left: 10%;
 }
 
