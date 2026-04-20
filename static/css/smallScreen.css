@@ -403,7 +403,7 @@ body {
     justify-content: center;
     align-items: center;
     font-family: inherit;
-    width: 375px;
+    width: auto;
     padding: 10px;
     height: 300px;
     border: 1.5px solid black;
