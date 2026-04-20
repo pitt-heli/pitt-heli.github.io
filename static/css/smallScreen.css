@@ -90,39 +90,6 @@ body {
         position: relative;
         height: 56px;
     }
-/* nav {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    ul {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin: 0;
-        padding: 0;
-        float: right;
-
-        li {
-            display: inline-block;
-            list-style: none;
-            margin: 10px 2px;
-
-            a {
-                text-decoration: none;
-                color: black;
-                font-size: 12px;
-            }
-
-            a.active {
-                color: black;
-                text-decoration: underline;
-                text-decoration-color: gold;
-            }
-        }
-    }
-} */
 
 .footer {
     display: flex;
@@ -140,9 +107,9 @@ body {
         margin-top: 0.1px;
     }
     img {
-        margin: 30px 0 25px 0;
-        width: 90px;
-        height: 90px;
+        margin: 150px 0 25px 0;
+        width: 40px;
+        height: 40px;
     }
 
     a {
@@ -407,9 +374,7 @@ body {
 }
 
 #homepage-leftOfBox {
-    /* padding-left: 10%; */
-    margin: 20px 0 0 20px;
-    order: 2;
+    display: none;
 }
 
 #homepage-box {
@@ -420,29 +385,17 @@ body {
 }
 
 #homepage-rightOfBox {
-    margin: 0 5px 20px auto;
-    order: 3;
+    display: none; 
 }
 #homepage-belowBox {
-        margin: -100px auto 0 107px;
-        justify-content: center;
+    display: none; 
 }
 #green-box {
-    position: absolute;
-    bottom: -25px;
-    right: -5px;
-    width: 50px;
-    height: 50px;
-    background-color: #2e7d5e;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: none;
 }
 
 .white-heli-logo {
-    width: 30px;
-    height: 30px;
+    display: none; 
 }
 
 #hompage-box-textbox {
@@ -493,7 +446,7 @@ body {
     letter-spacing: 4px;
 
     h1{
-        font-size: 18px;
+        font-size: 14px;
 
     }
 }
