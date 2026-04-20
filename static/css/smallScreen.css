@@ -410,7 +410,7 @@ body {
     /* padding-left: 10%; */
     display: inline-block;
     align-content: end;
-    margin: 0 auto 100px auto;
+    margin: 340px auto 100px auto;
 }
 
 #homepage-box {
@@ -422,16 +422,16 @@ body {
 
 #homepage-rightOfBox {
     display: inline-block;
-    margin: 0 auto 0 auto;
+    margin: 400px auto 0 auto;
 }
 #homepage-belowBox {
     display: flex;
     justify-content:center;
-    margin: 30px 65% 0 0;
+    margin: -70px 65% 0 0;
 }
 #green-box {
     position: absolute;
-    bottom: -45px;
+    bottom: 100px;
     right: -45px;
     width: 80px;
     height: 80px;
