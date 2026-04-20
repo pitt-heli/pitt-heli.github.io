@@ -36,6 +36,9 @@ async function setup() {
   // To prevent footer from flashing before people are rendered only show the body after the page is loaded
   document.body.style.visibility = 'visible';
 
+  // Setup mobile hamburger nav toggle
+  setupNavToggle();
+
 }
 
 // Used to setup raquel-section 
@@ -148,6 +151,25 @@ function setupPersonToggles() {
       content.hidden = expanded;
       toggle.querySelector('.toggle-arrow').style.transform = expanded ? '' : 'rotate(180deg)';
     });
+  });
+}
+
+// Used to setup the mobile hamburger nav toggle
+function setupNavToggle() {
+  const toggle = document.getElementById('navToggle');
+  const overlay = document.getElementById('navOverlay');
+  const close = document.getElementById('navClose');
+
+  if (!toggle || !overlay || !close) return;
+
+  toggle.addEventListener('click', () => {
+    overlay.classList.add('open');
+    toggle.style.display = 'none';        // hide hamburger when overlay opens
+  });
+
+  close.addEventListener('click', () => {
+    overlay.classList.remove('open');
+    toggle.style.display = 'block';       // restore hamburger when overlay closes
   });
 }
 

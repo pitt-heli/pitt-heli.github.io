@@ -17,11 +17,9 @@
     },
     {
       "name": "Mayujie Zhuo",
-      "image": "./static/images/logos/purple-heli.png",
+      "image": "./static/images/headshots/MAYUJIE ZHUO.jpg",
       "bio": "Mayujie Zhuo is a first-year PhD student in the Information Science program at the University of Pittsburgh. Her research interests include quantum information science education, AI literacy, and STEM learning. Before joining Pitt, Mayujie was a high school computer science teacher in China. She is also a language enthusiast who enjoys traveling and photography.",
-      "linkedin": "https://www.linkedin.com/in/mayujie-zhuo-80029929b/",
-      "imageWrapper": "headshots-tan"
-
+      "linkedin": "https://www.linkedin.com/in/mayujie-zhuo-80029929b/"
     }
   ],
 

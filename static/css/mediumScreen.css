@@ -10,6 +10,10 @@ body {
     font-style: normal;    overflow-x:hidden;
 }
 
+.nav-toggle, .nav-overlay {
+    display: none; 
+}
+
 nav {
     width: 100%;
     display: flex;
