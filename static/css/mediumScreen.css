@@ -333,6 +333,13 @@ nav {
     grid-column: 1;
 }
 
+.projects-page .project-card.project-card-expanded {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: none;
+    margin-top: 0;
+}
+
 .projects-page .project-card:not(.project-card-expanded) .project-card-summary-action {
     display: inline;
 }

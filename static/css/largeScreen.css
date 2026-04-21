@@ -604,8 +604,8 @@ h3.person-name {
 
 .projects-page .projects-list {
     display: grid;
-    grid-template-columns: repeat(2, minmax(430px, 540px));
-    justify-content: space-between;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-content: stretch;
     align-items: start;
     row-gap: 74px;
     column-gap: 120px;
@@ -708,6 +708,18 @@ h3.person-name {
     grid-column: 1;
     margin-top: 18px;
     margin-left: 72px;
+}
+
+.projects-page .project-card.project-card-expanded {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.projects-page .project-card.project-card-expanded .project-card-content p {
+    max-width: none;
 }
 
 .projects-page .project-card:not(.project-card-expanded) .project-card-summary-action {
