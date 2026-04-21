@@ -755,7 +755,7 @@ h3.person-name {
 .block-title {
     font-family: 'DM Sans', sans-serif;
     font-weight: 600;
-    font-size: auto;
+    font-size: 1.5rem;
     letter-spacing: 0.04em;
     color: #1a1a1a;
     margin-bottom: -5px;
@@ -765,7 +765,7 @@ h3.person-name {
 /* Grad/non-Pitt titles: nudged right to match box position */
 .prospects-block.grad-section .block-title,
 .prospects-block.nonpitt-section .block-title {
-    padding-left: 26%;
+    padding-left: 24%;
 }
 
 /* ── Bordered box ── */
@@ -782,7 +782,7 @@ h3.person-name {
 /* Grad/non-Pitt boxes: nudged right from the block's left edge */
 .prospects-block.grad-section .block-box,
 .prospects-block.nonpitt-section .block-box {
-    margin-left: 20%;
+    margin-left: 18%;
     margin-right: auto;
 }
 
@@ -810,7 +810,7 @@ h3.person-name {
 /* ── Body text ── */
 .section-body {
     font-family: 'DM Sans', sans-serif;
-    font-size: auto;
+    font-size: 1rem;
     line-height: 1.75;
     color: #2a2a2a;
     font-weight: 400;
@@ -859,7 +859,7 @@ h3.person-name {
 }
 
 .pitt-left .block-title {
-    padding-left: 1.5rem;
+    padding-left: 1rem;
     margin-bottom: -1px;
     align-self: flex-start;
 }
@@ -1008,7 +1008,7 @@ h3.person-name {
 .pub-text {
     flex: 1;
     font-family: 'DM Sans', sans-serif;
-    font-size: auto;
+    font-size: 1rem;
     line-height: 1.55;
     color: #f0ede4;
     font-weight: 400;
@@ -1023,7 +1023,7 @@ h3.person-name {
     flex-shrink: 0;
     font-family: 'DM Sans', sans-serif;
     font-style: normal;
-    font-size: auto;
+    font-size: 1rem;
     color: #a8e6c8;
     text-decoration: underline;
     text-underline-offset: 2px;

@@ -800,7 +800,7 @@ h3.person-name {
 /* ── Body text ── */
 .section-body {
     font-family: 'DM Sans', sans-serif;
-    font-size: auto;
+    font-size: 0.85rem;
     line-height: 1.7;
     color: #2a2a2a;
     font-weight: 400;
@@ -866,7 +866,7 @@ h3.person-name {
 .nour-title {
     font-family: 'DM Sans', sans-serif;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 0.85rem;
     color: #111;
     letter-spacing: 0.02em;
     margin: 0 0 0 0;
@@ -988,7 +988,7 @@ h3.person-name {
 .pub-text {
     flex: 1;
     font-family: 'DM Sans', sans-serif;
-    font-size: auto;
+    font-size: 0.85rem;
     line-height: 1.55;
     color: #f0ede4;
     font-weight: 400;
@@ -1003,7 +1003,7 @@ h3.person-name {
     flex-shrink: 0;
     font-family: 'DM Sans', sans-serif;
     font-style: normal;
-    font-size: auto;
+    font-size: 0.85rem;
     color: #a8e6c8;
     text-decoration: underline;
     text-underline-offset: 2px;
