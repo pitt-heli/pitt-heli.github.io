@@ -8,6 +8,7 @@ body {
     font-weight: 400;
     /* Regular weight */
     font-style: normal;    overflow-x:hidden;
+    margin: 0;
 }
 
 .nav-desktop {
