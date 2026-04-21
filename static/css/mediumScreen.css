@@ -77,22 +77,23 @@ nav {
 /* ====================================== CLASSES STYLING (Zhuoyan)====================================== */
 .classes-page {
     width: 100%;
-    background: #f5f5f5;
+    background: #7307a5;
     color: #111;
 }
 
 .classes-page .classes-hero {
     position: relative;
-    background: #7307a5;
+    background: transparent;
     padding: 52px 64px 80px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .classes-page .classes-hero h1 {
-    margin: 0 0 28px;
+    margin: 0 auto 28px;
     color: #c8ab62;
     font-size: 2.45rem;
     letter-spacing: 0.08em;
+    width: min(100%, 980px);
 }
 
 .classes-page .classes-hero h1,
@@ -171,29 +172,49 @@ nav {
     height: auto;
 }
 
+.classes-footer {
+    background: #7307a5;
+    padding: 160px 0 48px;
+    margin-bottom: 0;
+}
+
+.classes-footer img {
+    margin: 0 0 48px 0;
+}
+
+.classes-footer p {
+    color: #111;
+    line-height: 1.35;
+    margin: 0;
+    font-size: 0.88rem;
+}
+
 
 /* ====================================== PROJECTS STYLING (Zhuoyan) ====================================== */
 .projects-page {
     width: 100%;
-    background: #f5f5f5;
+    background: #c8ab62;
     color: #111;
 }
 
 .projects-page .projects-hero {
     position: relative;
-    min-height: 980px;
-    padding: 68px 74px 86px;
-    background: #c8ab62;
+    min-height: auto;
+    padding: 56px 92px 40px 152px;
+    background: transparent;
     font-family: "DM Sans", sans-serif;
 }
 
 .projects-page .projects-hero h1 {
-    margin: 0 0 40px;
-    color: #f9f2e6;
-    font-size: 3.3rem;
+    width: fit-content;
+    margin: 0 0 64px 180px;
+    color: #fffdf8;
+    font-family: "DM Sans", sans-serif;
+    font-size: 2.8rem;
     font-style: italic;
     font-weight: 400;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.03em;
+    line-height: 1;
 }
 
 .projects-page .projects-hero h1,
@@ -212,14 +233,16 @@ nav {
 }
 
 .projects-page .projects-list {
-    display: flex;
-    flex-direction: column;
-    gap: 42px;
-    padding-right: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(320px, 1fr));
+    align-items: start;
+    column-gap: 44px;
+    row-gap: 60px;
 }
 
 .projects-page .project-card {
-    max-width: 100%;
+    width: 100%;
+    max-width: 460px;
     background: #f4ecd9;
     border: 2px solid #313131;
     overflow: hidden;
@@ -248,6 +271,11 @@ nav {
 .projects-page .project-card-summary-action {
     display: none;
     font-size: 0.92rem;
+    align-items: center;
+    gap: 0.45em;
+}
+
+.projects-page .project-card-summary-text {
     text-decoration: underline;
     text-underline-offset: 0.16em;
 }
@@ -288,12 +316,21 @@ nav {
 }
 
 .projects-page .project-card:not(.project-card-expanded) {
-    width: min(100%, 460px);
+    width: 100%;
     max-width: 460px;
 }
 
-.projects-page .project-card:not(.project-card-expanded):nth-child(2) {
-    align-self: flex-end;
+.projects-page .project-card:nth-child(1) {
+    grid-column: 1;
+}
+
+.projects-page .project-card:nth-child(2) {
+    grid-column: 2;
+    margin-top: 92px;
+}
+
+.projects-page .project-card:nth-child(3) {
+    grid-column: 1;
 }
 
 .projects-page .project-card:not(.project-card-expanded) .project-card-summary-action {
@@ -315,8 +352,8 @@ nav {
 
 .projects-page .projects-back-to-top {
     position: absolute;
-    right: 28px;
-    top: 34%;
+    right: 34px;
+    top: 56%;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -327,6 +364,22 @@ nav {
 .projects-page .projects-back-to-top img {
     width: 26px;
     height: auto;
+}
+
+.projects-footer {
+    background: #c8ab62;
+    padding: 184px 0 48px;
+    margin-bottom: 0;
+}
+
+.projects-footer img {
+    margin: 0 0 64px 0;
+}
+
+.projects-footer p {
+    line-height: 1.35;
+    margin: 0;
+    font-size: 0.88rem;
 }
 
 /* ====================================== HOMEPAGE STYLING ====================================== */

@@ -43,7 +43,10 @@ function renderProjects(projects, containerId) {
         article.innerHTML = `
             <button class="project-card-toggle" type="button" aria-expanded="false" aria-controls="${contentId}">
                 <span class="project-card-title">${project.title}</span>
-                <span class="project-card-summary-action">Know more <span aria-hidden="true">↓</span></span>
+                <span class="project-card-summary-action">
+                    <span class="project-card-summary-text">Know more</span>
+                    <span class="project-card-summary-arrow" aria-hidden="true">↓</span>
+                </span>
             </button>
             <div class="project-card-content" id="${contentId}" hidden>
                 <p>${project.description}</p>
