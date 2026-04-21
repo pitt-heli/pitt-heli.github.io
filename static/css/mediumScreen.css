@@ -605,8 +605,10 @@ nav {
 }
 
 .toggle-arrow {
-  display: inline-block;
-  transition: transform 0.2s ease;
+    display: inline-block;
+    transition: transform 0.2s ease;
+    width: 25px;
+    height: 25px;
 }
 .headshot-wrap {
   position: relative;

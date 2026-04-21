@@ -100,7 +100,7 @@ function renderStudents(students, containerId) {
     div.innerHTML = `
       <div class="person-name-row">
         <h3 class="person-name">${student.name}</h3>
-        ${student.bio ? `<button class="person-card-toggle" aria-expanded="false"><span class="toggle-arrow">▼</span></button>` : ''}
+        ${student.bio ? `<button class="person-card-toggle" aria-expanded="false"><img class="toggle-arrow" src="static/images/logos/purple-up-arrow.png" alt="toggle bio"></button>` : ''}
       </div>
       ${imgHTML}
       ${student.bio ? `<div class="person-card-content" hidden><p>${student.bio}</p>${linkedinHTML}</div>` : linkedinHTML}
@@ -136,7 +136,6 @@ function renderAlumni(alumni, containerId) {
   });
 }
 
-// Used to setup dropdown arrow toggles for bios on each person card
 function setupPersonToggles() {
   const cards = Array.from(document.querySelectorAll('.student'));
 
@@ -145,11 +144,15 @@ function setupPersonToggles() {
     const content = card.querySelector('.person-card-content');
     if (!toggle || !content) return;
 
+    // Set initial state: arrow pointing down
+    const arrow = toggle.querySelector('.toggle-arrow');
+    arrow.style.transform = 'rotate(180deg)';
+
     toggle.addEventListener('click', () => {
       const expanded = toggle.getAttribute('aria-expanded') === 'true';
       toggle.setAttribute('aria-expanded', String(!expanded));
       content.hidden = expanded;
-      toggle.querySelector('.toggle-arrow').style.transform = expanded ? '' : 'rotate(180deg)';
+      arrow.style.transform = expanded ? 'rotate(180deg)' : '';
     });
   });
 }
