@@ -107,7 +107,7 @@ body {
         margin-top: 0.1px;
     }
     img {
-        margin: 150px 0 25px 0;
+        margin: 50px 0 25px 0;
         width: 40px;
         height: 40px;
     }
@@ -382,6 +382,8 @@ body {
     position: relative;
     display: inline-block;
     /* padding: 30px 0px 0px 300px; */
+    width: 300px;
+    margin: 0 auto 0 auto;
 }
 
 #homepage-rightOfBox {
@@ -403,13 +405,12 @@ body {
     justify-content: center;
     align-items: center;
     font-family: inherit;
-    width: auto;
     padding: 10px;
-    height: 300px;
+    height: auto;
     border: 1.5px solid black;
     border-radius: 4px;
     background: #fff;
-    font-size: 12px;
+    font-size: 13px;
     line-height: 1.6;
     box-sizing: border-box;
     pointer-events: none;
@@ -446,7 +447,7 @@ body {
     letter-spacing: 4px;
 
     h1{
-        font-size: 14px;
+        font-size: 1.95rem;
 
     }
 }
@@ -558,8 +559,10 @@ body {
 }
 
 .toggle-arrow {
-  display: inline-block;
-  transition: transform 0.2s ease;
+    display: inline-block;
+    transition: transform 0.2s ease;
+    width: 15px;
+    height: 15px;
 }
 .headshot-wrap {
   position: relative;
@@ -568,7 +571,7 @@ body {
 .headshot-wrap .person-card-toggle {
   position: absolute;
   top: -20px;       /* adjust to align vertically with the arc text */
-  left: 140px;     /* adjust to sit just after the name ends */
+  left: 100px;     /* adjust to sit just after the name ends */
   background: none;
   border: none;
   cursor: pointer;
@@ -704,7 +707,7 @@ h3.person-name {
 }
 .people-back-to-top {
     position:fixed;
-    right: 0px;
+    right: -5px;
     top: 28%;
     display: inline-flex;
     width: 34px;
