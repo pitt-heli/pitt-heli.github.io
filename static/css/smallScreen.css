@@ -791,27 +791,20 @@ h3.person-name {
     font-weight: 600;
 }
 
-/* ── Block: wraps title + bordered box ── */
+/* ── Block: wraps title + bordered box (all three same width) ── */
 .prospects-block {
     margin-bottom: 3rem;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 1.2rem;
+    max-width: 80vw;
+    padding: 0;
+    box-sizing: border-box;
     opacity: 0;
     transform: translateY(14px);
 }
 
 .prospects-block.visible {
     animation: fadeUp 0.55s ease forwards;
-}
-
-/* Match grad/non-Pitt block widths to Pitt block */
-.prospects-block.grad-section,
-.prospects-block.nonpitt-section {
-    max-width: 88vw;
-    padding: 0;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /* ── Block title: sits just above the border ── */
@@ -822,34 +815,22 @@ h3.person-name {
     letter-spacing: 0.04em;
     color: #1a1a1a;
     margin-bottom: -5px;
-    padding-left: 1rem;
+    padding-left: 8%;
 }
 
-/* Grad/non-Pitt titles: on small, box fills more of the block, so smaller indent */
-.prospects-block.grad-section .block-title,
-.prospects-block.nonpitt-section .block-title {
-    padding-left: 19%;
-}
-
-/* ── Bordered box ── */
+/* ── Bordered box: always fills its block ── */
 .block-box {
     border: 2px solid rgba(0, 0, 0, 0.15);
     padding: 1.2rem 1.3rem;
     position: relative;
-    max-width: 70%;
+    width: 100%;
+    max-width: none;
     box-sizing: border-box;
-    margin: 0 auto;
+    margin: 0;
     overflow: visible;
 }
 
-/* Grad/non-Pitt boxes: smaller nudge on small screens */
-.prospects-block.grad-section .block-box,
-.prospects-block.nonpitt-section .block-box {
-    margin-left: 12%;
-    margin-right: auto;
-}
-
-/* ── Dot: 60px (scaled down further for small) ── */
+/* ── Dot: 60px ── */
 .block-dot {
     position: absolute;
     top: -30px;
@@ -895,19 +876,12 @@ h3.person-name {
     color: #036644;
 }
 
-/* ── Pitt block: on small screens, stack vertically (diagonal doesn't fit) ── */
-.prospects-block.pitt-block {
-    max-width: 80vw;
-    padding: 0;
-    margin-left: auto;
-    margin-right: auto;
-}
-
+/* ── Pitt block: stacks vertically on small (diagonal doesn't fit) ── */
 .pitt-block {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    align-items: center;
+    align-items: stretch;
     width: 100%;
 }
 
@@ -920,16 +894,12 @@ h3.person-name {
 }
 
 .pitt-left .block-title {
-    padding-left: 1rem;
     margin-bottom: -1px;
     align-self: flex-start;
 }
 
 .pitt-block .block-box {
     border-color: #04915F;
-    width: 100%;
-    max-width: none;
-    margin: 0;
 }
 
 .nour-box {
@@ -989,7 +959,7 @@ h3.person-name {
     width: 22px;
     height: auto;
 }
- 
+
 /* ====================================== PUBLICATIONS STYLING (Mitchell) ====================================== */
 
 .page-main {
