@@ -50,8 +50,7 @@
     },
     {
       "name": "Ella Negley",
-      "image": "./static/images/logos/green-heli.png",
-      "imageWrapper": "headshots-purple",
+      "image": "./static/images/headshots/Ella.jpg",
       "bio": "Ella is a sophomore at Elon University, where she is majoring in Statistics and Data Analytics with a concentration in actuarial science. She is an incoming Learning Sciences REU student at the Learning Research and Development Center (LRDC). Her interests include curriculum design and critical thinking, driven by a passion for fostering internal motivation in students. Outside the classroom, she serves in student government, works as a Peer Success Coach, and enjoys bullet journaling.",
       "linkedin": ""
     },
