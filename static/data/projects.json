@@ -2,28 +2,35 @@
   {
     "id": "q-jam",
     "title": "Q-JAM (PI)",
-    "description": "Quantum mechanics is beginning to fundamentally change how information is processed, secured, and transmitted, yet most students never encounter these ideas in school. Q-JAM is a summer camp where students explore concepts like superposition, entanglement, and measurement, and their applications in computing, communication, and sensing, by redesigning familiar board games with a quantum twist. Working in teams, students brainstorm, prototype, and playtest their designs, consult with quantum experts, and present their games at a public showcase. Q-JAM invites students to sit with questions that even physicists haven't resolved, finding that uncertainty is not a barrier to understanding, but an invitation to wonder.",
+    "description": "Quantum mechanics is beginning to fundamentally change how information is processed, secured, and transmitted, yet most students never encounter these ideas in school. Q-JAM is a summer camp where students explore concepts like superposition, entanglement, and measurement, and their applications in computing, communication, and sensing, by redesigning familiar board games with a quantum twist. Working in teams, students brainstorm, prototype, and playtest their designs, consult with quantum experts, and present their games at a public showcase. Q-JAM invites students to sit with questions that even physicists haven't resolved, finding that uncertainty is not a barrier to understanding, but an invitation to wonder. Collaborators: Junyu Liu & Christian Schunn",
     "link": "https://qjamcamp.wixsite.com/q-jam",
     "modifierClass": ""
   },
    {
     "id": "inspire_write",
     "title": "InspireWrite (Co-PI)",
-    "description": "InspireWrite is an AI-powered writing assistant currently in development that learns from expert instructors' feedback practices to help college students elaborate their ideas. Using language models trained on authentic student-instructor interactions, the system generates curiosity-driven questions that augment learning conversations with instructors while scaffolding students' growth as independent, metacognitively aware writers who can identify and strengthen their own ideas long after the course ends.",
+    "description": "InspireWrite is an AI-powered writing assistant currently in development that learns from expert instructors' feedback practices to help college students elaborate their ideas. Using language models trained on authentic student-instructor interactions, the system generates curiosity-driven questions that augment learning conversations with instructors while scaffolding students' growth as independent, metacognitively aware writers who can identify and strengthen their own ideas long after the course ends. Collaborators Lorraine Li (PI), Diane Litman, & Gayle Rogers.",
     "link": "#",
     "modifierClass": ""
   },
   {
     "id": "q-hubs",
     "title": "Q-HUBS (PI)",
-    "description": "Q-HUBS is a regional model currently in development that aims to create lasting pathways into quantum literacy for students and educators across Pennsylvania. Building on the work of Q-JAM, it envisions a full pipeline of experiences, from summer camps and after-school clubs to teacher professional development, organized around a network of district hubs that enable regional collaboration and shared resources. The goal is to position students and educators not just to use future quantum technologies, but to understand, question, and shape them as they emerge.",
+    "description": "Q-HUBS is a regional model currently in development that aims to create lasting pathways into quantum literacy for students and educators across Pennsylvania. Building on the work of Q-JAM, it envisions a full pipeline of experiences, from summer camps and after-school clubs to teacher professional development, organized around a network of district hubs that enable regional collaboration and shared resources. The goal is to position students and educators not just to use future quantum technologies, but to understand, question, and shape them as they emerge. Collaborators: Sharin Jacob, Quinn Burke, Aileen Owens, Junyu Liu, & Christian Schunn.",
+    "link": "#",
+    "modifierClass": ""
+  },
+     {
+    "id": "peerAI",
+    "title": "Transforming Peer Feedback Through AI (PI)",
+    "description": "Peer feedback is a powerful pedagogical tool, yet outcomes vary dramatically: some students gain substantial learning benefits from giving and receiving feedback, while others benefit little. This project uses large language models to analyze hundreds of thousands of student peer comments, investigating what makes feedback effective, for whom it works best, and how AI can be thoughtfully integrated to support the dialogic nature of peer learning without replacing human interaction, scaffolding conversations between feedback givers and receivers. Collaborators: Christian Schunn & Lorraine Li.",
     "link": "#",
     "modifierClass": ""
   },
   {
     "id": "vida",
     "title": "VIDA (PI)",
-    "description": "Students bring rich knowledge and lived experiences to the classroom, yet these often go unrecognized in instruction. VIDA uses artificial intelligence to analyze large-scale student writing and surface the community concerns and experiences students from shared cultural communities bring to learning. The findings are translated into professional development resources that help teachers better understand and build on the knowledge their students bring from outside school.",
+    "description": "(Completed project) Students bring rich knowledge and lived experiences to the classroom, yet these often go unrecognized in instruction. VIDA used artificial intelligence to analyze large-scale student writing and surface the community concerns and experiences students from shared cultural communities bring to learning. The findings were translated into professional development resources that help teachers better understand and build on the knowledge their students bring from outside school.",
     "link": "https://www.tandfonline.com/doi/abs/10.1080/0163853X.2025.2558356",
     "modifierClass": ""
   }
