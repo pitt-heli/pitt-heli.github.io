@@ -22,7 +22,7 @@
   },
      {
     "id": "peerAI",
-    "title": "Transforming Peer Feedback Through AI (PI)",
+    "title": "Transforming Peer Feedback Through GenAI (Co-PI)",
     "description": "Peer feedback is a powerful pedagogical tool, yet outcomes vary dramatically: some students gain substantial learning benefits from giving and receiving feedback, while others benefit little. This project uses large language models to analyze hundreds of thousands of student peer comments, investigating what makes feedback effective, for whom it works best, and how AI can be thoughtfully integrated to support the dialogic nature of peer learning without replacing human interaction, scaffolding conversations between feedback givers and receivers. Collaborators: Christian Schunn & Lorraine Li.",
     "link": "#",
     "modifierClass": ""
