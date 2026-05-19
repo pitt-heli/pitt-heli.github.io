@@ -9,7 +9,7 @@
    {
     "id": "inspire_write",
     "title": "InspireWrite (Co-PI)",
-    "description": "InspireWrite is an AI-powered writing assistant currently in development that learns from expert instructors' feedback practices to help college students elaborate their ideas. Using language models trained on authentic student-instructor interactions, the system generates curiosity-driven questions that augment learning conversations with instructors while scaffolding students' growth as independent, metacognitively aware writers who can identify and strengthen their own ideas long after the course ends. Collaborators Lorraine Li (PI), Diane Litman, & Gayle Rogers.",
+    "description": "InspireWrite is an AI-powered writing assistant currently in development that learns from expert instructors' feedback practices to help college students elaborate their ideas. Using language models trained on authentic student-instructor interactions, the system generates curiosity-driven questions that augment learning conversations with instructors while scaffolding students' growth as independent, metacognitively aware writers who can identify and strengthen their own ideas long after the course ends. Collaborators: Lorraine Li (PI), Diane Litman, & Gayle Rogers.",
     "link": "#",
     "modifierClass": ""
   },
